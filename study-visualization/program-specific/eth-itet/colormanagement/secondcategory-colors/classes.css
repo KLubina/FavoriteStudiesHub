@@ -1,0 +1,33 @@
+/* ==== ETH ITET - CSS CLASSES ==== */
+/* Program-specific CSS classes for ITET - Simplified */
+
+/* ITET-specific classes */
+[data-studiengang="eth-itet"] .modul.basisprufungsblock-a,
+[data-studiengang="eth-itet"] .legende-item.basisprufungsblock-a {
+    background-color: var(--color-basisprufungsblock-a);
+    color: white;
+}
+
+[data-studiengang="eth-itet"] .modul.basisprufungsblock-b,
+[data-studiengang="eth-itet"] .legende-item.basisprufungsblock-b {
+    background-color: var(--color-basisprufungsblock-b);
+    color: white;
+}
+
+[data-studiengang="eth-itet"] .modul.prufungsblock-1,
+[data-studiengang="eth-itet"] .legende-item.prufungsblock-1 {
+    background-color: var(--color-prufungsblock-1);
+    color: white;
+}
+
+[data-studiengang="eth-itet"] .modul.prufungsblock-2,
+[data-studiengang="eth-itet"] .legende-item.prufungsblock-2 {
+    background-color: var(--color-prufungsblock-2);
+    color: white;
+}
+
+[data-studiengang="eth-itet"] .modul.prufungsblock-3,
+[data-studiengang="eth-itet"] .legende-item.prufungsblock-3 {
+    background-color: var(--color-prufungsblock-3);
+    color: white;
+}

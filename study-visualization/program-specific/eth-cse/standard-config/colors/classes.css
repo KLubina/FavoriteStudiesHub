@@ -1,0 +1,131 @@
+/* ==== ETH CSE - CSS CLASSES ==== */
+/* Program-specific CSS classes for CSE */
+
+/* Main category classes */
+[data-studiengang="eth-cse"] .modul.wissenschaftliche-arbeit,
+[data-studiengang="eth-cse"] .legende-item.wissenschaftliche-arbeit {
+    background-color: var(--color-wissenschaftliche-arbeit, #16a34a);
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.kern,
+[data-studiengang="eth-cse"] .legende-item.kern {
+    background-color: var(--color-kern);
+    color: var(--color-kern-text, white);
+}
+
+[data-studiengang="eth-cse"] .modul.wahl,
+[data-studiengang="eth-cse"] .legende-item.wahl {
+    background-color: var(--color-wahl);
+    color: var(--color-wahl-text, black);
+}
+
+[data-studiengang="eth-cse"] .modul.vertiefung,
+[data-studiengang="eth-cse"] .legende-item.vertiefung {
+    background-color: var(--color-vertiefung);
+    color: var(--color-vertiefung-text, black);
+}
+
+/* CSE-specific classes */
+[data-studiengang="eth-cse"] .modul.mathematik,
+[data-studiengang="eth-cse"] .legende-item.mathematik {
+    background-color: #00a99d;
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.informatik,
+[data-studiengang="eth-cse"] .legende-item.informatik {
+    background-color: #2600ff;
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.physik,
+[data-studiengang="eth-cse"] .legende-item.physik {
+    background-color: #2196F3;
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.chemie,
+[data-studiengang="eth-cse"] .legende-item.chemie {
+    background-color: #9C27B0;
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.sonstiges,
+[data-studiengang="eth-cse"] .legende-item.sonstiges {
+    background-color: #E0E0E0;
+    color: black;
+}
+[data-studiengang="eth-cse"] .modul.basis1,
+[data-studiengang="eth-cse"] .legende-item.basis1 {
+    background-color: var(--color-basis1);
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.basis2,
+[data-studiengang="eth-cse"] .legende-item.basis2 {
+    background-color: var(--color-basis2);
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.block-g1,
+[data-studiengang="eth-cse"] .legende-item.block-g1 {
+    background-color: var(--color-block-g1);
+    color: black;
+}
+
+[data-studiengang="eth-cse"] .modul.block-g2,
+[data-studiengang="eth-cse"] .legende-item.block-g2 {
+    background-color: var(--color-block-g2);
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.block-g3,
+[data-studiengang="eth-cse"] .legende-item.block-g3 {
+    background-color: var(--color-block-g3);
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.block-g4,
+[data-studiengang="eth-cse"] .legende-item.block-g4 {
+    background-color: var(--color-block-g4);
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.physik,
+[data-studiengang="eth-cse"] .legende-item.physik {
+    background-color: var(--color-physik);
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.informatik,
+[data-studiengang="eth-cse"] .legende-item.informatik {
+    background-color: var(--color-informatik);
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.mathematik,
+[data-studiengang="eth-cse"] .legende-item.mathematik {
+    background-color: var(--color-mathematik);
+    color: white;
+}
+
+[data-studiengang="eth-cse"] .modul.chemie,
+[data-studiengang="eth-cse"] .legende-item.chemie {
+    background-color: var(--color-chemie);
+    color: white;
+}
+
+/* Dynamic Prüfungsblock classes (overridden by JavaScript) */
+[data-studiengang="eth-cse"] .modul.block-basis1,
+[data-studiengang="eth-cse"] .legende-item.block-basis1 { background-color: #8064A2; color: white; }
+[data-studiengang="eth-cse"] .modul.block-basis2,
+[data-studiengang="eth-cse"] .legende-item.block-basis2 { background-color: #1F77B4; color: white; }
+[data-studiengang="eth-cse"] .modul.block-g1,
+[data-studiengang="eth-cse"] .legende-item.block-g1 { background-color: #8DC63F; color: black; }
+[data-studiengang="eth-cse"] .modul.block-g2,
+[data-studiengang="eth-cse"] .legende-item.block-g2 { background-color: #E671B8; color: white; }
+[data-studiengang="eth-cse"] .modul.block-g3,
+[data-studiengang="eth-cse"] .legende-item.block-g3 { background-color: #4CAF50; color: white; }
+[data-studiengang="eth-cse"] .modul.block-g4,
+[data-studiengang="eth-cse"] .legende-item.block-g4 { background-color: #D32F2F; color: white; }
