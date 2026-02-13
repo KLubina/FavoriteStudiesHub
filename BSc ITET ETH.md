@@ -1,217 +1,279 @@
-1.) Elektrotechnik und Informationstechnologie
+# 1. Semester
 
-1. Semester
+# Technische Mechanik
 
-Technische Mechanik
-	Kinematik
-		Kraft
-		Moment
-		Geschwindigkeit/Bewegung
-	Statik
-		Gleichgewicht
-		Äquivalenz und Reduktion von Kräftegruppen
-		Reibung
-	Dynamik
-		Newtonsches Bewegungsgesetz (2. Newton)
-		Impulssatz
-		Drallsatz
+    Kinematik
+    	Kraft
+    	Moment
+    	Geschwindigkeit/Bewegung
+    Statik
+    	Gleichgewicht
+    	Äquivalenz und Reduktion von Kräftegruppen
+    	Reibung
+    Dynamik
+    	Newtonsches Bewegungsgesetz (2. Newton)
+    	Impulssatz
+    	Drallsatz
 
-Netzwerk und Schaltungen I
-	Strom und Spannung auf ihren physikalischen Ursprung zurückführen
-		Elektrostatisches Feld
-		Stromleitungsmechanismen
-	Grundbauelemente elektrischer Schaltungen beschreiben. Schaltungselemente in ihrer technischen Ausführung mathematisch beschreiben, analysieren und entwerfen
-		Einfache elektrische Netzwerke
-	Strom- und Spannungsverteilungen in Gleichstromnetzwerken berechnen
-		Stationäres elektrisches Strömungsfeld
-	elektromagnetische Induktion erklären und auf technische Anwendungen übertragen
-		Zeitlich veränderliches elektromagnetisches Feld
+# Netzwerk und Schaltungen I
 
-Digitaltechnik
-	wesentlichen Bausteine der Digitaltechnik erkennen und einsetzen
-		Grundbegriffe analog – digital
-		Transistoren in CMOS‑Technik
-		Zahlensysteme und Codes
-		Speicher und Mikroprozessoren
-		Kombinatorische und sequenzielle Schaltungen als Bausteine
-	digitale Schaltungen analysieren und entwickeln
-		Logische Verknüpfungen
-		Schaltalgebra (Boolesche Algebra)
-		Schaltungsanalyse und ‑synthese
-		Kombinatorische und sequenzielle Schaltungen
-	endliche Automaten systematisch entwerfen
-		Endliche Automaten
-		Sequenzielle Schaltungen (FSM sind eine Untermenge davon)
-		Speicher und Mikroprozessoren (Zustände werden gespeichert)
+    Physikalische Grundlagen
+    	Stromursprung
+    	Spannungsursprung
+    	Elektrostatisches Feld
+    	Leitungsmechanismen
+    Bauelemente & Analyse
+    	Grundbauelemente
+    	Mathematische Modelle
+    	Schaltungsentwurf
+    	Netzwerk-Analyse
+    Gleichstromnetzwerke
+    	Stromverteilung
+    	Spannungsverteilung
+    	Stationäres Strömungsfeld
+    	Berechnungsmethoden
+    Elektromagnetische Felder
+    	Induktion
+    	Zeitvariante Felder
+    	Technische Anwendungen
 
-Analysis I
-Lineare Algebra
+# Digitaltechnik
+
+    Grundlagen & Bausteine
+    	Analog vs. Digital
+    	CMOS-Technik
+    	Zahlensysteme
+    	Speicherbausteine
+    Schaltungsdesign
+    	Logikgatter
+    	Boolesche Algebra
+    	Kombinatorik
+    	Sequenzielle Logik
+    Systementwurf
+    	Endliche Automaten (FSM)
+    	Zustandsspeicher
+    	Mikroprozessor-Basics
+    	Synthese-Methoden
+
+# Analysis I
+
+# Lineare Algebra
 
 2. Semester
 
-Physik I
-Analysis II
-Mathematische Methoden
+# Physik I
 
-Netzwerk und Schaltungen II
-	Methoden der komplexen Wechselstromrechnung und der Netzwerkberechnung anwenden können.
-		Komplexe Wechselstromrechnung
-		Methoden und Sätze der Netzwerkberechnung
-		Maschenstromverfahren
-		Knotenpotentialverfahren
+# Analysis II
 
-	Übergangs- und Übertragungsverhalten elektrischer Netzwerke im Zeit- und Frequenzbereich verstehen und berechnen können.
-		Netzwerke mit nicht sinusförmiger periodischer Erregung
-		Fourierzerlegung
-		Zeit- und Frequenzbereich
-		Schaltvorgänge in elektrischen Netzwerken
-		Übergangsverhalten
-		Fouriertransformation
-		Laplacetransformation
-		Übertragungsfunktion von Netzwerken
-		Zweitore
+# Mathematische Methoden
 
-	Grundschaltungen mit Operationsverstärkern verstehen, dimensionieren und berechnen können
-		Verstärkergrundschaltungen
-		Gegentaktverstärker und Differenzverstärker
-		Operationsverstärker
-		Operationsverstärker‑Grundschaltungen
-		Schaltungen mit Operationsverstärkern
+# Netzwerk und Schaltungen II
 
-Informatik I
-	Fundamentale Datentypen, Ausdrücke und Anweisungen
-	Computerarithmetik, Kontrollanweisungen, Funktionen, Klassen, Referenzen und Zeiger
-	Charakteristiken und Anwendung fundamentaler Containertypen
-	Aufbau und Speichermanagement einfacher dynamischer Datentypen
+    Wechselstromrechnung
+    	Komplexe Methoden
+    	Maschenstromverfahren
+    	Knotenpotentialverfahren
+    	Netzwerksätze
+    Systemverhalten
+    	Zeitbereich
+    	Frequenzbereich
+    	Übergangsverhalten
+    	Übertragungsfunktion
+    	Zweitore
+    Signalanalyse
+    	Nicht-sinusförmige Signale
+    	Fourierzerlegung
+    	Fouriertransformation
+    	Laplacetransformation
+    Operationsverstärker
+    	Grundschaltungen
+    	Gegentaktverstärker
+    	Differenzverstärker
+    	Dimensionierung
+
+# Informatik I
+
+    Grundlagen
+    	Fundamentale Datentypen
+    	Ausdrücke & Anweisungen
+    	Computerarithmetik
+    Programmierkonzepte
+    	Kontrollstrukturen
+    	Funktionen
+    	Klassen (OOP)
+    	Referenzen & Zeiger
+    Datenstrukturen
+    	Containertypen
+    	Dynamische Datentypen
+    	Speichermanagement
 
 3. Semester
 
-Signal- und Systemtheorie I
-	Signale und Systeme aufgrund deren Eigenschaften einteilen
-		Signalanalyse im Zeit- und Frequenzbereich
-		Signal- und Hilberträume
-		Lineare zeitinvariante Systeme
-		Verallgemeinerte Funktionen
-	zeitkontinuierliche Signale abtasten und das Abtasttheorem verstehen
-		Abtasttheorem
-	zeitdiskrete Systeme auf deren Verhalten untersuchen
-		Zeitdiskrete Signale und Systeme (z‑Transformation)
-	diskrete Fourier-Transformation zur Signalanalyse einsetzen und mittels schneller Fourier-Transformation effizient berechnen
-		Diskrete Fourier-Transformation (DFT)
-		Schnelle Fourier-Transformation (FFT)
-Informatik II
-	Asymptotische Laufzeit (algorithmische Komplexität)
-	Fundamentale algorithmische Probleme
- 		Suchen
- 		Sortieren
- 		kürzeste Wege
- 		Spannbäume
-	Klassische Datenstrukturen
- 		Suchbäume
- 		balancierte Bäume
- 		Heaps
- 		Hashtabellen
-	Graphentheorie und -probleme
-	Problemlösungsstrategien als Entwurfsmuster für Algorithmen
- 		Induktion
- 		Divide-and-Conquer
- 		Backtracking
- 		dynamische Programmierung
-	Generisches Programmieren
- 		C++-Templates
- 		Funktionen höherer Ordnung
- 		Lambdas
- 		Closures
-	Paralleles Programmieren
- 		(Un)abhängigkeit von Berechnungen
- 		Parallelität und Nebenläufigkeit
- 		geteilter Speicher
- 		Wettlaufsituationen
- 		wechselseitiger Ausschluss
- 		Kommunikation und Synchronisation
+# Signal- und Systemtheorie I
 
-Halbleiterschaltungstechnik
-	Transistor-Grundlagen
-		Rekapitulation des Transistors als Bauteil (bipolar und MOSFET)
-		Gross- und Kleinsignalverhalten, Arbeitspunkt und Arbeitspunkteinstellung
-		Eintransistorverstärker, einfache Rückkopplung zur Arbeitspunkteinstellung
+    Grundlagen
+    	Signalklassifikation
+    	Systemklassifikation
+    	Zeit- & Frequenzbereich
+    	Signal- & Hilberträume
+    Systemtheorie
+    	Lineare zeitinvariante Systeme (LTI)
+    	Verallgemeinerte Funktionen
+    Abtastung
+    	Zeitkontinuierliche Signale
+    	Abtasttheorem
+    Zeitdiskrete Systeme
+    	Systemverhalten
+    	z-Transformation
+    Fouriertransformation
+    	Diskrete Fourier-Transformation (DFT)
+    	Schnelle Fourier-Transformation (FFT)
 
-	Frequenzverhalten
-		Frequenzgang von einfachen Verstärkern
-		Methoden zur Bandbreitenerweiterung
+# Informatik II
 
-	Spezielle Verstärkertypen
-		Differenzverstärker, Operationsverstärker, Verstärker mit variabler Bandbreite
-		Instrumentierungsverstärker: Gleichtaktunterdrückung, Rauschen, Störsignale, Chopper-Technik
-		Transimpedanzverstärker
+    Algorithmen & Komplexität
+    	Asymptotische Laufzeit (O-Notation)
+    	Basis-Algorithmen
+    		Suchen
+    		Sortieren
+    	Graphenalgorithmen
+    		Kürzeste Wege
+    		Spannbäume
+    Datenstrukturen
+    	Baumstrukturen
+    		Suchbäume
+    		Balancierte Bäume
+    		Heaps
+    	Hashtabellen
+    Entwurfsstrategien
+    	Induktion
+    	Divide & Conquer
+    	Backtracking
+    	Dynamische Programmierung
+    Generische Programmierung
+    	C++ Templates
+    	Funktionale Konzepte
+    		Funktionen höherer Ordnung
+    		Lambdas
+    		Closures
+    Parallelisierung
+    	Grundlagen
+    		Nebenläufigkeit
+    		Abhängigkeiten
+    	Speichermodelle
+    		Geteilter Speicher
+    	Synchronisation
+    		Race Conditions
+    		Mutex
+    		Kommunikation
 
-	Aktive Filter
-		Aktive Filter: einfache aktive Filter, Filter mit biquadratischen Stufen
-		Filter höherer Ordnung, Realisierung mit biquadratischen Stufen und mit Leiterstruktur
-		Switched-Cap-Filter
+# Halbleiterschaltungstechnik
 
-Physik II
-Diskrete Mathematik
-Analysis III
+    Transistor-Grundlagen
+    	Bauteile (Bipolar/MOSFET)
+    	Signalverhalten
+    	Arbeitspunkt
+    	Eintransistorverstärker
+    Frequenzanalyse
+    	Verstärker-Frequenzgang
+    	Bandbreitenerweiterung
+    Spezielle Verstärker
+    	Differenzverstärker
+    	Instrumentierungsverstärker
+    		Störunterdrückung
+    		Chopper-Technik
+    	Transimpedanzverstärker
+    Aktive Filter
+    	Grundstrukturen
+    	Biquadratische Stufen
+    	Höhere Ordnung
+    	Switched-Cap-Filter
+
+# Physik II
+
+# Diskrete Mathematik
+
+# Analysis III
 
 4. Semester
 
-Signal- und Systemtheorie II
-	Systemmodellierung
-		Modellierung und Typenbezeichnung von dynamischen Systemen
-		Modellierung von linearen, zeitinvarianten Systemen durch Zustandsgleichungen
+# Signal- und Systemtheorie II
 
-	Zustandsraumanalyse
-		Lösung von Zustandsgleichungen durch Zeitbereich- und Laplacebereichmethoden
-		Stabilitäts-, Steuerbarkeits- und Beobachtbarkeitsanalyse
+    Systemmodellierung
+    	Dynamische Systeme
+    	LTI-Systeme
+    	Zustandsgleichungen
+    Zustandsraumanalyse
+    	Lösungsmethoden
+    	Stabilität
+    	Steuerbarkeit
+    	Beobachtbarkeit
+    Frequenzbereichsanalyse
+    	Frequenzgang
+    	Bode-Diagramm
+    	Nyquist-Diagramm
+    Zeitdiskrete Systeme
+    	Abtastung
+    	Systemmodelle
+    Erweiterte Themen
+    	Nichtlineare Systeme
+    	Chaos
+    	Diskrete Ereignisse
+    	Hybride Systeme
 
-	Frequenzbereichsanalyse
-		Beschreibung im Frequenzbereich, Bode- und Nyquistdiagramm
+# Technische Informatik
 
-	Zeitdiskrete Systeme
-		Abgetastete und zeitdiskrete Systeme
+    Hardware-Architektur
+    	Mikroprozessoren
+    		Control Paths
+    		Data Paths
+    	Optimierungen
+    		Pipelining
+    		Speculation
+    		Caching
+    Software-Systeme
+    	Low-Level Programmierung
+    	Betriebssystem-Konzepte
+    		Speicherverwaltung
+    			Physisch
+    			Virtuell
+    		Prozess-Management
+    		Scheduling
 
-	Weiterführende Themen
-		Nichtlineare Systeme
-		Chaos
-		Diskrete Ereignissysteme
-		Hybride Systeme
+# Halbleiterelemente
 
-Technische Informatik
-	On the hardware side, the course will show 
-		how microprocessors implement control and data paths 
-		microarchitectural optimizations such as 
-			pipelining
-			speculation 
-			caching
+    Einführung
+    	Historie der Mikroelektronik
+    Halbleiterphysik
+    	Festkörper-Kristallstruktur
+    	Halbleitereigenschaften (Si)
+    	Quantenmechanik & Bändermodell
+    	Leitfähigkeit & Dispersion
+    	Gleichgewichtsstatistik
+    	Transportgleichungen
+    	Generation & Rekombination
+    Bauelemente
+    	pn-Übergang
+    		Physik & Elektrik
+    	pn-Diode
+    		Kennlinien
+    		Kleinsignalverhalten
+    		Durchbruchmechanismen
+    	MOS-Bauelemente
+    		Bänderdiagramm
+    		MOSFET-Betrieb
+    		CV- & IV-Charakteristiken
+    		Frequenzverhalten
+    	Bipolartransistoren
+    		Funktionsprinzip
+    		Betriebsmodi
+    		Modellierung & Simulation
 
-	On the software side, the course will show 
-		how to program a microprocessor 
-		introducing fundamental concepts in the design of operating systems such as
-			physical and virtual memory management
-			process management and scheduling
+# Elektromagnetische Wellen und Felder
 
-Halbleiterelemente
-	Einführung
-		Brief survey of the history of microelectronics
+# Numerik
 
-	Grundlagen der Halbleiterphysik
-		Crystal structure of solids
-		Properties of silicon and other semiconductors
-		Principles of quantum mechanics, band model
-		Conductivity, dispersion relation
-		Equilibrium statistics, transport equations
-		Generation-recombination (G-R), Quasi-Fermi levels
-
-	Halbleiterbauelemente
-		Physical and electrical properties of the pn-junction
-		pn-diode: Characteristics, small-signal behaviour, G-R currents, ideality factor, junction breakdown
-		MOS devices: Band diagram, MOSFET operation, CV- and IV characteristics, frequency limitations and non-ideal behaviour
-		Bipolar transistor: Operation principles, modes of operation, characteristics, models, simulation
-
-Elektromagnetische Wellen und Felder
-Numerik
-Wahrscheinlichkeitstheorie und Statistik
+# Wahrscheinlichkeitstheorie und Statistik
 
 5. Semester
 6. Semester
