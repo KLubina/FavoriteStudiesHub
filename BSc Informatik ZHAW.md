@@ -726,111 +726,164 @@
 
 # Betriebssysteme
 
-- Analyse und Vergleich von MBR- und UEFI-Bootprozessen in Linux-Systemen
-  - Funktionsweise
-  - Vor- und Nachteile.
-- Entwicklung eines minimalistischen Bootloaders zur Initialisierung eines Testsystems.
-- Vergleich verschiedener Prozess-Scheduling-Algorithmen (z. B. Round-Robin, CFS, Priority) und deren Einfluss auf Systemleistung.
-- Messung und Steuerung von Prozessressourcen mittels cgroups
-  - Limits
-  - Prioritäten und Isolation.
-- Untersuchung der Speicherverwaltung in Linux
+- Bootprozesse
+  - MBR vs UEFI
+    - Funktionsweise
+    - Vor- und Nachteile
+  - Bootloader
+    - Initialisierung
+    - Testsysteme
+    - Minimalismus
+- Prozess-Management
+  - Scheduling-Algorithmen
+    - Round-Robin
+    - CFS
+    - Priority
+  - Ressourcesteuerung
+    - Control Groups (cgroups)
+      - Limits
+      - Prioritäten
+      - Isolation
+    - Systemleistung
+- Speicherverwaltung
   - Virtueller Speicher
   - Paging
-  - Swapping und Seitentabellen.
-- Entwicklung eines einfachen Linux-Kernelmoduls oder Gerätetreibers unter Nutzung von DKMS.
-- Vergleich von Dateisystemen und Overlay Filesystems hinsichtlich Performance
-- Zuverlässigkeit und RAM-/TMP-Usage.
-- Analyse und Nutzung des Logical Volume Managers (LVM)
-  - Partitionen
-  - Volumes und Storage-Management.
+  - Swapping
+  - Seitentabellen
+- Kernel-Entwicklung
+  - Module
+    - Gerätetreiber
+    - DKMS
+  - Systemaufrufe
+  - Netzwerktreiber
+- Dateisysteme
+  - Vergleich
+    - Performance
+    - Zuverlässigkeit
+    - Ressourcennutzung
+  - Overlay Filesystems
+  - Storage-Management
+    - Logical Volume Manager (LVM)
+      - Partitionen
+      - Volumes
+
 - Implementierung und Performanceanalyse virtueller Maschinen mit KVM/QEMU und Libvirt.
 - Untersuchung von Systemaufrufen und Netzwerktreibern im Betriebssystem
   - Funktionsweise und Performance-Effekte.
 
 # Computertechnik 2
 
-- Das Modul zeigt den Ausbau eines Prozessors zu einem vollständigen Computer System.
-- Vom Prozessor zum System
-- Aufbau eines Microcontrollers
-- Funktionsweise Systembus
-- Memory Map und Adressdekodierung
-- Funktion und Verwendung von Kontroll- und Statusregistern.
-- Einsatz von Peripherieschaltungen
-- Anschluss von IOs über GPIO
-- Serieller Datentransfer
-  - UART
-  - SPI
-  - I2C
-- Timer
-- Counter und ihre Anwendungen
-- Analog Digital Converter (ADC)
-- Hardware Abstraction
-- Speicherhierarchien
-- Speichertechnologien
-  - Volatile
-    - SRAM
-    - DRAM) vs. non-volatile (ROM
-    - Flash
-    - EEPROM
-- Anschluss von externen Speicherbausteinen
-- Cache
-  - Temporal and Spatial Locality
-  - Auswirkungen auf die Software
-- Ablaufsteuerung von Programmen
-- Strukturierung eines Programmes in Module
-- Software State-Machines (State-Event Model)
-- Erkennen von Events
-  - Polling vs. Interrupt-driven IO
-- Interrupt Performance und Latency
-- Hardwarenahe Programmierpraktika
-- Arbeiten mit Cross-Compiler
-- Linker
-- Loader und Debugger
+- Systemarchitektur
+  - Prozessorausbau
+  - Microcontroller-Aufbau
+  - Systembus
+  - Adressdekodierung
+- Speicherorganisation
+  - Speichertechnologien
+    - Volatile (SRAM, DRAM)
+    - Non-volatile (Flash, EEPROM)
+  - Speicherhierarchien
+  - Cache-Konzepte
+    - Locality (Temporal/Spatial)
+    - Software-Auswirkungen
+  - Externe Speicher
+- Peripherie-Schnittstellen
+  - General Purpose IO (GPIO)
+  - Serieller Transfer
+    - UART
+    - SPI
+    - I2C
+  - Zeit- und Messfunktionen
+    - Timer
+    - Counter
+    - ADC
+- Programmsteuerung
+  - Ablaufsteuerung
+  - Modulstrukturierung
+  - State-Machines
+    - State-Event Model
+- Event-Handling
+  - Event-Erkennung
+    - Polling
+    - Interrupts
+  - Interrupt-Charakteristik
+    - Performance
+    - Latency
+- Entwicklungswerkzeuge
+  - Cross-Compiler
+  - Linker
+  - Loader
+  - Debugger
 
 # IT-Sicherheit
 
-    - Einführung in die Kryptographie
-      - Secret and Public Key Kryptographie
-      - Hashfunktionen
-      - Signaturen
-      - Message Authentication Codes
-    - Zertifikate und Public Key Infrastructure
-    - Sichere Protokolle
-      - TLS
-      - Quic
-      - WPA2
-      - etc.
-    - Mechanismen zum Absichern von Netzwerken
-      - Network Access Control
-      - Firewall
-      - VPN
-      - etc.
-    - Methoden zur Benutzerauthentisierung
-    - Autorisierungskonzepte in Unix und Windows
-    - Rechtliche Rahmenbedingungen mit Bezug auf Cybersecurity in der Schweiz
+- Kryptographie
+  - Verschlüsselung
+    - Symmetrisch
+    - Asymmetrisch
+  - Datenintegrität
+    - Hashfunktionen
+    - Signaturen
+    - MACs
+- Sicherheitsinfrastruktur
+  - Public Key Infrastructure
+    - Zertifikate
+    - Vertrauensketten
+  - Protokolle
+    - TLS
+    - QUIC
+    - WPA2
+- Netzwerkschutz
+  - Zugangskontrolle
+    - Network Access Control
+  - Abwehrmechanismen
+    - Firewall
+    - VPN
+- Identitätsmanagement
+  - Authentisierung
+    - Benutzernachweis
+    - Multi-Faktor
+  - Autorisierung
+    - Unix-Rechte
+    - Windows-Rechte
+- Rahmenbedingungen
+  - Rechtliche Aspekte
+    - Cybersecurity-Gesetze
+    - Schweizer Recht
 
 # Maschinelles Lernen & Data Mining
 
-- In diesem Modul lernen Sie die Voraussetzungen für dessen Einsatz sowie verschiedene wichtige Algorithmen des maschinellen Lernens kennen.
-
-- Technische Umsetzung
-- Python-Code zur Datenvorverarbeitung schreiben
-- Zentrale ML-Algorithmen implementieren
-  - überwacht
-  - unüberwacht
-  - Ensemble
-- End-to-End-ML-Pipelines erstellen
-- Problemlösungsstrategie
-- Geschäftliche Probleme als ML-Probleme formulieren
-- Geeignete Algorithmen auswählen
-- Entscheidungen datengestützt begründen
-- Berufspraxis
-- Modellleistung mit branchenüblichen Metriken validieren
-- Fallstricke wie Überanpassung und Datenlecks vermeiden
-- Ergebnisse technisch und nicht-technisch präsentieren
-- Anwendung in der Praxis
-- Einsatz in Bereichen wie Gesundheitsprognosen
-- Finanzmodellierung oder Computer Vision
-
-- Portfolio-Projekte zur Demonstration der Fähigkeiten für zukünftige Arbeitgeber
+- ML-Implementierung
+  - Datenverarbeitung
+    - Python-Vorverarbeitung
+    - Feature Engineering
+  - Algorithmen
+    - Supervised Learning
+    - Unsupervised Learning
+    - Ensemble Methods
+  - Pipelines
+    - End-to-End
+    - Automatisierung
+- Problemlösungskompetenz
+  - Strategie
+    - Problemformulierung
+    - Modellauswahl
+    - Datenbasierte Entscheidungen
+  - Validierung
+    - Metriken
+    - Performance-Analyse
+- Best Practices
+  - Fehlervermeidung
+    - Overfitting
+    - Data Leakage
+  - Kommunikation
+    - Ergebnispräsentation
+    - Stakeholder-Management
+- Anwendungsbereiche
+  - Domänen
+    - Gesundheitsprognosen
+    - Finanzmodellierung
+    - Computer Vision
+  - Praxisprojekte
+    - Portfolio-Erstellung
+    - Kompetenznachweis
