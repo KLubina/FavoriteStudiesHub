@@ -214,9 +214,6 @@ Englisch
   - Energieerhaltung
   - Mechanische Energie
 
-Projekt 2
-Grundlagenlabor 2
-
 # Allgemeine Elektrotechnik 2
 
 - Wechselstromtheorie
@@ -288,6 +285,9 @@ Grundlagenlabor 2
   - Dokumentation
   - Klassendiagramme
   - Schnittstellenbeschreibung
+
+Projekt 2
+Grundlagenlabor 2
 
 Kommunikation
 Englisch
