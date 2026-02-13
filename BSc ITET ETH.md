@@ -428,9 +428,48 @@
 
 # Elektromagnetische Wellen und Felder
 
+- Grundlagen
+  - Maxwell'sche Gleichungen
+  - Wellengleichung
+- Wellenausbreitung
+  - Felder im freien Raum
+  - Brechung & Reflexion
+- Strahlung
+  - Dipolstrahlung
+  - Feldwinkelspektrum
+
 # Numerik
 
+- Grundlagen
+  - Scientific Python
+  - Fehleranalyse
+- Analysis-Methoden
+  - Nullstellensuche
+  - Newton-Verfahren
+  - Quadratur
+- Differentialgleichungen
+  - Anfangswertaufgaben
+  - Einschrittverfahren
+  - Schrittweitensteuerung
+  - Stabilitätsanalyse
+
 # Wahrscheinlichkeitstheorie und Statistik
+
+- Wahrscheinlichkeitsräume
+  - Kolmogorov-Axiome
+  - Diskrete Modelle
+  - Verteilungsfunktionen
+- Bedingte Wahrscheinlichkeiten
+  - Bayes'sche Regel
+  - Nachrichtenquellen
+  - Bedingte Verteilungen
+- Zufallsvariablen
+  - Erwartungswert & Varianz
+  - Gesetz der grossen Zahlen
+  - Zentraler Grenzwertsatz
+- Statistik
+  - Parameterschätzung
+  - Hypothesentests
 
 # 5. Semester
 
