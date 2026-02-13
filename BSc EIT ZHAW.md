@@ -225,7 +225,7 @@
 
 Communication Competence Basic
 
-Digitaltechnik-Projekt
+# Digitaltechnik-Projekt
 
 - Projektarbeit
   - Audio Synthesizer
@@ -247,7 +247,7 @@ Digitaltechnik-Projekt
   - Test-Benches
   - Planung
 
-Elektrizitätslehre 2
+# Elektrizitätslehre 2
 
 - Induktion
   - Wirbelstrom
@@ -269,7 +269,7 @@ Elektrizitätslehre 2
   - RL-Glieder
   - Transformatoren
 
-Digital Communication Networks
+# Digital Communication Networks
 
 - Netzwerkgrundlagen
   - Kommunikationstechnik
@@ -290,7 +290,7 @@ Digital Communication Networks
   - NAT
   - HTTP
 
-Informatik 2
+# Informatik 2
 
 - C Erweiterungen
   - Dateioperationen
@@ -309,7 +309,7 @@ Informatik 2
   - Polymorphie
   - Kapselung
 
-Lineare Algebra 2
+# Lineare Algebra 2
 
 - Vektorräume
   - Unterräume
@@ -331,7 +331,7 @@ Lineare Algebra 2
   - Differentialgleichungen
   - Projektionen
 
-Analysis 2
+# Analysis 2
 
 - Funktionen
   - Potenzfunktionen
@@ -350,7 +350,7 @@ Analysis 2
   - Theorie
   - Lösungen
 
-Physik 2
+# Physik 2
 
 - Rotationsmechanik
   - Drehmoment
