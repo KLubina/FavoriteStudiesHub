@@ -105,7 +105,6 @@
 
 # Grundlagen der Elektrotechnik und Digitaltechnik
 
-- Grundlagen
 - Grundbegriffe
   - Ladung
   - Kraft
@@ -189,124 +188,234 @@
 - Grundbegriffe
   - Zahlenmengen
   - Aussagen
-  - Prädikate und Quantoren
-- Mengen
+  - Prädikate
+  - Quantoren
+- Mengenlehre
   - Elemente
-  - Teilmengen und Extensionalität
-- Mengen
-  - Aussonderungs- und Ersetzungsprinzip
+  - Teilmengen
+  - Extensionalität
+  - Aussonderungsprinzip
+  - Ersetzungsprinzip
 - Mengenoperationen
   - Potenzmenge
   - Schnittmenge
   - Vereinigungsmenge
-- Mächtigkeitsbegriff
-  - Abzählbarkeit und Überabzählbarkeit
-  - erstes und zweites
-- Diagonalargument
+  - Differenzmenge
+  - Komplement
+- Mächtigkeit
+  - Abzählbarkeit
+  - Überabzählbarkeit
+  - Erstes Diagonalargument
+  - Zweites Diagonalargument
 - Relationen
-  - Tupel und Produktmengen
-- Funktionen als Relationen
-- Äquivalenzrelationen
-- Äquivalenzklassen und Partitionen
-- (Halb-) Ordungsrelationen
-- Hasse Diagramme
-- Satz von Marczewski-Szpilrajn
+  - Tupel
+  - Produktmengen
+  - Funktionen als Relationen
+  - Äquivalenzrelationen
+    - Äquivalenzklassen
+    - Partitionen
+    - Reflexivität
+    - Symmetrie
+    - Transitivität
+  - Ordnungsrelationen
+    - Halbordnungen
+    - Totalordnungen
+    - Hasse-Diagramme
+    - Satz von Marczewski-Szpilrajn
 - Rekursive Strukturen
   - Natürliche Zahlen
-  - Peano Axiome und Induktion
-  - Wohlfundierte
-- Induktion
-- induktive Definitionen und strukturelle Induktion.
+  - Peano-Axiome
+  - Vollständige Induktion
+  - Wohlfundierte Induktion
+  - Induktive Definitionen
+    - Strukturelle Induktion
+    - Rekursive Definitionen
+    - Rekursionsgleichungen
 - Elementare Zahlentheorie
-  - Teilbarkeit und Euklidischer Algorithmus
-- Primzahlen und Primfaktorzerlegung
-- Modulare Arithmetik und das Lemma von Bézout
-- Chinesischer Restsatz und Lösen simultaner Kongruenzen
-- Kleiner Satz von Fermat
+  - Teilbarkeit
+  - Euklidischer Algorithmus
+  - Primzahlen
+  - Primfaktorzerlegung
+  - Eindeutigkeit der Zerlegung
+- Modulare Arithmetik
+  - Kongruenzen
+  - Restklassen
+  - Lemma von Bézout
+  - Chinesischer Restsatz
+  - Simultane Kongruenzen
+- Sätze der Zahlentheorie
+  - Kleiner Satz von Fermat
+  - Eulersche Phi-Funktion
+  - Satz von Euler
+  - Invertierbarkeit modulo n
 
 # 2. Semester
 
 # Programmieren 2
 
-- Erweiterte Java-Sprachkonzepte
-- Verschachtelte-
-- Innere- & Anonyme-Klassen
+- Erweiterte Sprachkonzepte
+  - Verschachtelte Klassen
+  - Innere Klassen
+  - Anonyme Klassen
+  - Enumerationen
 - Funktionale Programmierung
   - Lambda-Ausdrücke
   - Funktionale Interfaces
-- Methodenreferenzen
-- Funktionen als Argumente und Rückgabewerte
-- Funktionale Streams
+  - Methodenreferenzen
+  - Höhere Funktionen
+    - Funktionen als Argumente
+    - Funktionen als Rückgabewerte
+  - Streams
+    - Map
+    - Filter
+    - Reduce
+    - Collect
 - Nebenläufigkeit
-- Grundlagen von Nebenläufigkeit
-- Der Thread Lebenszyklus
-- Thread-Management
-  - Executor-Services
-  - Thread-Pooling
-- Callables
-- Futures
-- Thread-Safety
-- Atomare Typen
-- Kooperation von Threads
-  - Wechselseitiger Ausschluss & Zustandssynchronisation
-- Erweitertes Monitor-Konzept
-- Lock & Conditions
-- Vermeiden von Deadlocks
-- Einfache grafische Benutzeroberflächen (GUIs)
-- GUI-Prinzipien
-- -Architektur
-- -Komponenten und -Layout
-- Entwickeln von GUI-Anwendungen mittels JavaFX und FXML
-- Model-View-Controller
-- Presenter & Observer-Pattern
-- Dynamik von Benutzeroberflächen
+  - Thread-Grundlagen
+    - Thread-Lebenszyklus
+    - Thread-Erzeugung
+    - Thread-Zustände
+  - Thread-Management
+    - Executor-Services
+    - Thread-Pooling
+    - Callables
+    - Futures
+  - Thread-Safety
+    - Atomare Typen
+    - Synchronized
+    - Volatile
+  - Thread-Kooperation
+    - Wechselseitiger Ausschluss
+    - Zustandssynchronisation
+    - Monitor-Konzept
+    - Lock
+    - Conditions
+  - Deadlocks
+    - Erkennung
+    - Vermeidung
+    - Prävention
+- GUI-Entwicklung
+  - GUI-Prinzipien
+    - Architektur
+    - Komponenten
+    - Layout
+  - JavaFX
+    - FXML
+    - Scene Graph
+    - Controls
+  - Entwurfsmuster
+    - Model-View-Controller
+    - Presenter-Pattern
+    - Observer-Pattern
   - Ereignisverarbeitung
-- Ein- und Ausgabe von Daten – Java IO
-- Umgang mit dem Filesystem (Dateien & Verzeichnisse)
-- Lesen und Schreiben von Dateien
-- Das Decorator Pattern
-- Umgang mit Resourcen
-- Properties & Resource-Bundle
-- Datencodierung und Zeichensätze
-- Mock-Testing
-- Prinzipien und Ökonomie von Software Testing
-- Testisolation
-  - Testdoubles
-  - Stubbing & Mocking
-- Zustandstests vs. Verhaltensverifikation
-- Erstellen von Mock-Tests
+    - Event-Handler
+    - Event-Propagation
+    - Benutzerinteraktion
+- Ein-/Ausgabe
+  - Filesystem
+    - Dateien
+    - Verzeichnisse
+    - Pfade
+  - Streams
+    - Lesen
+    - Schreiben
+    - Decorator-Pattern
+  - Ressourcen
+    - Properties
+    - Resource-Bundle
+    - Zeichensätze
+    - Datencodierung
+- Testing
+  - Testprinzipien
+    - Testisolation
+    - Testökonomie
+    - Testabdeckung
+  - Mock-Testing
+    - Testdoubles
+    - Stubbing
+    - Mocking
+  - Verifikation
+    - Zustandstests
+    - Verhaltensverifikation
+    - Assertions
 
 # Software-Projekt 2
 
 - Wenden die Lerninhalte aus Programmieren 1 & 2 an.
 
-- Softwareanalyse und Refactoring
-- Projektplanung und Fortschrittstracking
-- Anwendung von Entwicklungswerkzeugen im Team
-- Ideenfindung und Evaluation
-- Reflexion von Projektverlauf und Ergebnis
+- Projektmanagement
+  - Ideenfindung und Evaluation
+  - Projektplanung und Fortschrittstracking
+  - Anwendung von Entwicklungswerkzeugen im Team
+  - Softwareanalyse und Refactoring
+  - Reflexion von Projektverlauf und Ergebnis
 
 # Systemnahe Programmierung
 
-- C und Unix-ähnliche Betriebssysteme sind eng verwandt und in der heutigen Informatik
-- unabdingbar.
-
-- Grundlegende Programmelemente (Sprachelemente, Datentypen, Variablen, Konstanten,
-- Deklarationen
-- Operatoren
-- Ausdrücke
+- C-Grundlagen
+  - Sprachelemente
+  - Datentypen
+  - Variablen
+  - Konstanten
+  - Deklarationen
+- Operatoren und Ausdrücke
+  - Arithmetische Operatoren
+  - Logische Operatoren
+  - Bitweise Operatoren
+  - Zuweisungen
 - Kontrollstrukturen
-- Strukturen), Funktionen, Arrays,
+  - Verzweigungen
+  - Schleifen
+  - Switch-Case
+- C-Datenstrukturen
+  - Strukturen
+  - Unions
+  - Arrays
+  - Strings
+  - Funktionen
 - Pointer
-- Memory Management
-- Modulare Programmierung (inkl. Präprozessor, Compiling
-- und Linking). MISRA C.
-
-- Prozesse und Threads. Koordination und Kooperation,
-- Prozesssynchronisation
-- Interprozesskommunikation. Datenhandhabung
-- Speicherverwaltung
-- Datei-Systeme.
+  - Pointerarithmetik
+  - Funktionspointer
+  - Doppelpointer
+  - void-Pointer
+- C-Speicherverwaltung
+  - Stack
+  - Heap
+  - malloc/calloc/realloc
+  - free
+  - Speicherlecks
+- Modulare C-Programmierung
+  - Präprozessor
+  - Header-Dateien
+  - Compiling
+  - Linking
+  - MISRA C
+- Unix-Grundlagen
+  - Shell
+  - Dateisystem-Hierarchie
+  - Berechtigungen
+  - Umgebungsvariablen
+- Unix-Prozesse
+  - fork/exec
+  - Prozesszustände
+  - Prozessbaum
+  - Zombies/Waisen
+- Unix-Threads
+  - pthreads
+  - Mutex
+  - Semaphoren
+  - Condition Variables
+- Interprozesskommunikation
+  - Pipes
+  - Named Pipes (FIFOs)
+  - Shared Memory
+  - Signale
+  - Sockets
+- Unix-I/O
+  - Dateideskriptoren
+  - open/read/write/close
+  - Dateisysteme
+  - Systemaufrufe
 
 # Kommunikationstechnik
 
@@ -328,109 +437,124 @@
 
 # Theoretische Informatik
 
-- Motivation der theoretischen Informatik:
-
-- Formale Berechnungsmodelle - Grundlegende Prinzipien erkennen
-- unabhängig von Hard-
-- und Software - Grenzen der automatischen Berechnungen
-
-(1) Formale Sprachen / Automatentheorie:
-
-- Grundlegende Definitionen der Formalen Sprachen - Reguläre Sprachen
-- endlicher
-- Automat (DEA, NEA, e-NEA) - Kontextfreie Sprachen
-- Kellerautomaten - (Rekursive
-- Sprachen), Turingmaschine (TM) - Chomsky-Hierarchie
-
-(2) Berechenbarkeit und Algorithmus-Begriff:
-
-- Berechenbare Funktionen Church'sche These - Äquivalenz von TM und Computer -
-- Berechenbarkeit und Programmier-Sprachen
-  - GOTO-
-  - While- und Loop-Programme. -
-- Algorithmus-Begriff - Primitive Rekursion - Nicht-Entscheidbarkeit und Entscheidbarkeit:
-- Diagonalisierungssprache Ld
-- Satz von Rice
-- Fleissige Bieber - Semi-entscheidbare
-- Probleme
+- Formale Sprachen
+  - Alphabet
+  - Wörter
+  - Grammatiken
+  - Chomsky-Hierarchie
+- Reguläre Sprachen
+  - Reguläre Ausdrücke
+  - DEA
+  - NEA
+  - ε-NEA
+  - Äquivalenz DEA/NEA
+- Kontextfreie Sprachen
+  - Kontextfreie Grammatiken
+  - Ableitungsbäume
+  - Kellerautomaten
+  - Pumping-Lemma
+- Berechenbarkeitsmodelle
+  - Turingmaschine
+  - Rekursive Sprachen
+  - Church'sche These
+  - Äquivalenz TM/Computer
+- Programmiersprachen-Modelle
+  - GOTO-Programme
+  - While-Programme
+  - Loop-Programme
+  - Primitive Rekursion
+- Entscheidbarkeit
+  - Entscheidbare Probleme
+  - Nicht-Entscheidbarkeit
+  - Diagonalisierungssprache
+  - Satz von Rice
+- Semi-Entscheidbarkeit
   - Halteproblem
+  - Fleissige Biber
   - Game-of-Life
-  - Collatz-Zahlen - Reduktion
-
-(3) Komplexitätstheorie
-
-- Komplexität von Algorithmen - O-Notation (Omega-Notation) - polynomiale Funktionen und
-- exponentielle Funktionen - Klasse P
-- Klasse NP - NP-vollständig
-- NP-schwierig -
-  (Polynomialzeit-Reduktion)
+  - Collatz-Zahlen
+  - Reduktion
+- Komplexitätstheorie
+  - O-Notation
+  - Omega-Notation
+  - Polynomiale Funktionen
+  - Exponentielle Funktionen
+- Komplexitätsklassen
+  - Klasse P
+  - Klasse NP
+  - NP-vollständig
+  - NP-schwierig
+  - Polynomialzeit-Reduktion
 
 # 3. Semester
 
 # Software-Projekt 3
 
-- In diesem Modul entwickeln Sie eine grössere objektorientierte Softwareapplikation. Dabei
-- werden die vermittelten Analyse- und Entwurfs-Kompetenzen aus dem Modul SWEN1
-- angewendet (Wissenstransfer).
+- Wissen aus Software-Entwicklung 1 anwenden.
+- Grössere objektorientierte Softwareapplikation entwickeln.
 
 # Software-Entwicklung 1
 
-- Dieses Modul vermittelt die nötigen Analyse- und Entwurfs-Kompetenzen
-- um grössere und komplexere Softwareapplikationen entwickeln und realisieren zu können.
-
-- Einführung und Softwareentwicklungsprozessmodelle (4 Lektionen)
-- Überblick über Softwareentwicklungsprozessmodelle und deren Anwendungsgebiete
+- Prozessmodelle
   - Wasserfall
-  - iterativ-inkrementell und agile
-- Ablauf und Artefakte in einem iterativ-inkrementellen
-- Use-Case-getriebenen und architekturzentrierten Softwareentwicklungsprozess
-
-- Anforderungsanalyse (16 Lektionen)
-- Einführung in Usability und UX
+  - Iterativ-inkrementell
+  - Agile Methoden
+  - Use-Case-getrieben
+  - Architekturzentriert
+- Usability und UX
   - Contextual Inquiry
-  - Personas und Szenarien
-  - UI-Sketching & Prototyping
-- Erhebung und Kommunikation von funktionalen Anforderungen mit Use Cases
-  - UML-Use-Case-Diagramm
-  - Use-Case-Spezifikation
-- Erhebung und Kommunikation von nicht funktionalen Anforderungen
-  (Qualitätsanforderungen, Randbedingungen)
-- Modellierung der Fachlichkeit und Begriffe des Anwenders
-  - Domänenmodell) und Einführung in Domain Driven Design (DDD
-  - konzeptuelles UML- Klassendiagramm
-
-- Softwarearchitektur und Design (36 Lektionen)
-- Entwurf und Modellierung einer Softwarearchitektur
-  - 4+1 Sicht
+  - Personas
+  - Szenarien
+  - UI-Sketching
+  - Prototyping
+- Anforderungsanalyse
+  - Funktionale Anforderungen
+    - Use-Case-Diagramm
+    - Use-Case-Spezifikation
+    - Akteure
+  - Nicht-funktionale Anforderungen
+    - Qualitätsanforderungen
+    - Randbedingungen
+    - Performance
+  - Domänenmodellierung
+    - Domänenmodell
+    - Domain Driven Design
+    - Konzeptuelles Klassendiagramm
+    - Ubiquitous Language
+- Softwarearchitektur
+  - 4+1-Sichtenmodell
   - UML-Paketdiagramm
   - UML-Deploymentdiagramm
-- Einführung in Clean Architecture
-  - SOLID Prinzipien
-  - Schichtenarchitektur
-  - Onion Architecture
-- Use-Case-Realisierung und Klassendesign
-  - Responsibility Driven Design (RDD)
+  - Clean Architecture
+    - SOLID-Prinzipien
+    - Schichtenarchitektur
+    - Onion Architecture
+    - Dependency Inversion
+- Klassendesign
+  - Responsibility Driven Design
   - UML-Klassendiagramm
   - UML-Sequenzdiagramm
-  - UML- Kommunikationsdiagramm
+  - UML-Kommunikationsdiagramm
   - UML-Zustandsdiagramm
   - UML-Aktivitätsdiagramm
-- Entwurf mit Design Patterns
-  - GoF
+- Design Patterns (GoF)
+  - Erzeugungsmuster
     - Factory
     - Singleton
-    - Adaptor
+  - Strukturmuster
+    - Adapter
     - Bridge
     - Composite
     - Decorator
     - Facade
     - Proxy
+  - Verhaltensmuster
     - Chain of Responsibility
     - Observer
     - State
     - Strategy
     - Visitor
-- Verschiedene Vertiefungsthemen wie zum Beispiel
+- Vertiefungsthemen
   - Verteilte Systeme
   - GUI-Architekturen
   - Persistenz
@@ -438,86 +562,119 @@
 
 # Web-Entwicklung
 
-- Einführung in JavaScript mit Node.js (12 Lektionen)
+- JavaScript-Grundlagen
+  - Variablen
+  - Datentypen
+  - Arrays
+  - Funktionen
+  - Scoping
+- JS-Ökosystem
   - JS Engines
-  - ECMAScript- und JavaScript-Versionen und Alternativen
+  - ECMAScript-Versionen
   - Transpiler
-  - Grundlagen
-    - Variablen
-    - Datentypen
-    - Arrays
-    - Funktionen
-  - Objektmodell
-    - Objekte
-    - Konstruktoren
-    - Prototypen
-    - Klassen
-  - Asynchrone Ausführung von Funktionen
+  - Node.js
+- Objektmodell
+  - Objekte
+  - Konstruktoren
+  - Prototypen
+  - Klassen
+  - Vererbung
+- Asynchrone Programmierung
   - Callbacks
   - Event Queue
   - Promises
-  - Webserver mit Node.js
-    - Modulsystem
-    - JSON
-    - RESTful APIs
-- JavaScript im Browser (8 Lektionen)
+  - Async/Await
+- Server-Entwicklung
+  - Node.js-Webserver
+  - Modulsystem
+  - JSON
+  - RESTful APIs
+  - Middleware
+- Browser-APIs
   - Document Object Model
-  - Ereignisbehandlung im Browser
-  - Asynchrone Client-Server-Kommunikation
-    - Ajax
-    - Fetch-API
-  - Zustand (Cookies, Sessions) und Authentisierung
-- Web Framework (8 Lektionen)
-  - Bau eines eigenen Frameworks für Single Page Applications
-  - Komponentenarchitektur und render-Methode
-  - Zustand von Komponenten
+  - Ereignisbehandlung
+  - DOM-Manipulation
+  - Selektoren
+- Client-Server-Kommunikation
+  - Ajax
+  - Fetch-API
+  - HTTP-Methoden
+  - Asynchrone Requests
+- Zustandsmanagement
+  - Cookies
+  - Sessions
+  - Authentisierung
+  - LocalStorage
+- Web-Framework
+  - Single Page Applications
+  - Komponentenarchitektur
+  - Render-Methode
+  - Komponentenzustand
   - Properties
+- Komponenten-Lebenszyklus
   - Komponententypen
-  - Lebenszyklus von Komponenten
-  - Ereignisbehandlung und Routnig
+  - Lifecycle-Hooks
+  - Ereignisbehandlung
+  - Routing
   - Zustandscontainer
 
 # Computertechnik 1
 
-- Organisation eines Computersystems
-- Informationsdarstellung und Übersetzung von Programmen
+- Systemorganisation
+  - Computersystemaufbau
+  - Informationsdarstellung
+  - Programmübersetzung
 - Hardware-Architektur
   - CPU
   - Memory
   - I/O
   - Bus
-- Komponenten und Funktionsweise einer CPU
-- Instruktionssatz
-  - Codierung von Instruktionen und Operanden
-- Befehlsverarbeitung
-- Leistungsmerkmale von Prozessoren
-- Datentransfer und Speicherorganisation
-- Adressierungsarten
-- Speicherzugriff
-- Integer Datentypen
-- Arrays
-- Pointers
-- Memory Map
-- Endianess
-- Arithmetic Logic Unit (ALU)
-- Arithmetische und logische Operationen
-- Prozessorstatusregister und Flags
-- Rechnen mit der ALU
-- Integer Casting
+- CPU-Aufbau
+  - Komponenten
+  - Funktionsweise
+  - Instruktionssatz
+  - Befehlscodierung
+  - Befehlsverarbeitung
+- Speicherorganisation
+  - Adressierungsarten
+  - Speicherzugriff
+  - Memory Map
+  - Endianness
+  - Datentransfer
+- Datentypen
+  - Integer
+  - Arrays
+  - Pointers
+  - Integer Casting
+  - Typenkonvertierung
+- ALU
+  - Arithmetische Operationen
+  - Logische Operationen
+  - Statusregister
+  - Flags
+  - Rechnen mit ALU
 - Programmablaufsteuerung
-- Funktionen und Unterprogramme
-- Vergleichs- und Sprungbefehle
-- Strukturierte Codierung
-- Abbildung von KontrollstrukturenParameterübergabe und Stackframe
+  - Funktionen
+  - Unterprogramme
+  - Sprungbefehle
+  - Vergleichsbefehle
+  - Kontrollstrukturen
+- Stackframe
+  - Parameterübergabe
+  - Rückgabewerte
+  - Lokale Variablen
+  - Aufrufkonventionen
 - Exceptional Control Flow
-- Hardware Interrupts
-- Interrupt Service Routine
-- Vektortabelle
-- Exceptions (Traps)
+  - Hardware Interrupts
+  - Interrupt Service Routine
+  - Vektortabelle
+  - Exceptions/Traps
 - Linking
-- Aufgaben und Funktionsweise eines Linkers
-- Address Resolution und Relocation
-- Linker Map und Symbol Table
+  - Linker-Funktionsweise
+  - Address Resolution
+  - Relocation
+  - Symbol Table
+  - Linker Map
 
 # Algorithmen und Datenstrukturen
 
@@ -555,7 +712,8 @@
 
 # Software-Projekt 4
 
-- Die Studierenden führen in einem Team von etwa 7 (±2) Personen ein Software-Entwicklungsprojekt - von der Projektvision bis zur kundengerechten Software - mit SCRUM durch
+- Software-Entwicklungsprojekt mit etwa 7 Personen
+- SCRUM
 
 # Software-Entwicklung 2
 
