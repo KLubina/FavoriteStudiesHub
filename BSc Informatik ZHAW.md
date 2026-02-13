@@ -713,12 +713,16 @@
 # Software-Projekt 4
 
 - Software-Entwicklungsprojekt mit etwa 7 Personen
-- SCRUM
+- Projektmanagement:
+  - von Projektvision
+  - bis zur kundengerechten Software
+  - SCRUM
 
 # Software-Entwicklung 2
 
-- In dieser Vorlesung lernen die Studierenden die wichtigsten agilen Prinzipien
-- Praktiken und Werte von SCRUM sowie XP kennen
+- wichtigsten agilen Prinzipien
+  - SCRUM
+  - XP
 
 # Betriebssysteme
 
