@@ -15,14 +15,6 @@ window.StudienplanConfigLoader = {
       const categoriesConfigPath = `../program-specific/${studiengang}/standard-config/standardcategories-config.js`;
       await this.loadScript(categoriesConfigPath);
 
-      // Lade Color-Config falls vorhanden (für CSE)
-      const colorConfigPath = `../program-specific/${studiengang}/standard-config/color-config.js`;
-      try {
-        await this.loadScript(colorConfigPath);
-      } catch (e) {
-        // Color-Config ist optional
-      }
-
       // Lade Color Management Configs falls vorhanden
       const secondCategoriesPath = `../program-specific/${studiengang}/colormanagement/secondcategories-config.js`;
       try {
@@ -155,12 +147,10 @@ window.StudienplanConfigLoader = {
       !window.StudiengangCategoriesConfig ||
       !window.StudiengangCategoriesConfig.kategorien
     ) {
-      // Fallback: verwende color-config falls vorhanden, sonst vereinfache
+      // Fallback: vereinfache Kategorie
       return modules.map((module) => ({
         ...module,
-        standardcategory:
-          this.getCategoryFromColorConfig(module) ||
-          this.simplifyCategory(module.standardcategory),
+        standardcategory: this.simplifyCategory(module.standardcategory),
       }));
     }
 
@@ -173,18 +163,8 @@ window.StudienplanConfigLoader = {
       ...module,
       standardcategory:
         categoryMap[module.standardcategory] ||
-        this.getCategoryFromColorConfig(module) ||
         this.simplifyCategory(module.standardcategory),
     }));
-  },
-
-  // Hole Kategorie aus color-config (für CSE)
-  getCategoryFromColorConfig(module) {
-    if (window.CSEColorConfig && window.CSEColorConfig.getThemenbereich) {
-      const themenbereich = window.CSEColorConfig.getThemenbereich(module.name);
-      return themenbereich;
-    }
-    return null;
   },
 
   // Vereinfache Kategorie-Name zu CSS-Klasse
@@ -226,7 +206,6 @@ window.StudienplanConfigLoader = {
   getStudiengangName(studiengang) {
     const names = {
       "eth-cs": "Informatik",
-      "eth-cse": "Computer Science and Engineering",
       // Füge weitere hinzu...
     };
     return names[studiengang] || studiengang.toUpperCase();
