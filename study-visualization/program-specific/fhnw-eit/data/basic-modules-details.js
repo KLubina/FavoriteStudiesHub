@@ -5,154 +5,172 @@
 window.StudiengangModuleDetails = {
   // #region 1. Semester
   "Projekt 1": {
-    link: "https://www.fhnw.ch/de/studium/module/9169675"
+    link: "https://www.fhnw.ch/de/studium/module/9169675",
   },
   "Objektorientierte Programmierung 1": {
-    link: "https://www.fhnw.ch/de/studium/module/6007993"
+    link: "https://www.fhnw.ch/de/studium/module/6007993",
+    pruefungen:
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/1.Sem/OOP%201",
   },
   "Wärme und Strahlung": {
-    link: "https://www.fhnw.ch/de/studium/module/9063957"
+    link: "https://www.fhnw.ch/de/studium/module/9063957",
   },
   "Allgemeine Elektrotechnik 1": {
-    link: "https://www.fhnw.ch/de/studium/module/6007771"
+    link: "https://www.fhnw.ch/de/studium/module/6007771",
+    pruefungen:
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/1.Sem/Allgemeine%20Elektrotechnik%201",
   },
   "Konvergenz Elektrotechnik": {
-    link: "https://www.fhnw.ch/de/studium/module/9041293"
+    link: "https://www.fhnw.ch/de/studium/module/9041293",
   },
   "Analysis 1": {
-    link: "https://www.fhnw.ch/de/studium/module/6008327"
+    link: "https://www.fhnw.ch/de/studium/module/6008327",
+    pruefungen:
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/1.Sem/Analysis%201",
   },
   "Lineare Algebra 1": {
-    link: "https://www.fhnw.ch/de/studium/module/6008325"
+    link: "https://www.fhnw.ch/de/studium/module/6008325",
+    pruefungen:
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/1.Sem/Lineare%20Algebra",
   },
   "Grundlagenlabor 1": {
-    link: "https://www.fhnw.ch/de/studium/module/6010242"
+    link: "https://www.fhnw.ch/de/studium/module/6010242",
   },
   // #endregion
 
   // #region 2. Semester
-  "Algebra": {
-    link: "https://www.fhnw.ch/de/studium/module/6008331"
+  Algebra: {
+    link: "https://www.fhnw.ch/de/studium/module/6008331",
   },
   "Analysis 2": {
-    link: "https://www.fhnw.ch/de/studium/module/6008332"
+    link: "https://www.fhnw.ch/de/studium/module/6008332",
+    pruefungen:
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/2.Sem/Analysis%202",
   },
-  "Mechanik": {
-    link: "https://www.fhnw.ch/de/studium/module/9090504"
+  Mechanik: {
+    link: "https://www.fhnw.ch/de/studium/module/9090504",
+    pruefungen:
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/2.Sem/Mechanik",
   },
   "Projekt 2": {
-    link: "https://www.fhnw.ch/de/studium/module/9155733"
+    link: "https://www.fhnw.ch/de/studium/module/9155733",
   },
   "Grundlagenlabor 2": {
-    link: "https://www.fhnw.ch/de/studium/module/6010244"
+    link: "https://www.fhnw.ch/de/studium/module/6010244",
   },
   "Allgemeine Elektrotechnik 2": {
-    link: "https://www.fhnw.ch/de/studium/module/6007772"
+    link: "https://www.fhnw.ch/de/studium/module/6007772",
+    pruefungen:
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/2.Sem/Allgemeine%20Elektrotechnik%202",
   },
   "Digitaltechnik 1": {
-    link: "https://www.fhnw.ch/de/studium/module/6007847"
+    link: "https://www.fhnw.ch/de/studium/module/6007847",
+    pruefungen:
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/2.Sem/Digitaltechnik%201",
   },
   "Objektorientierte Programmierung 2": {
-    link: "https://www.fhnw.ch/de/studium/module/6007994"
+    link: "https://www.fhnw.ch/de/studium/module/6007994",
+    pruefungen:
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/2.Sem/OOP%202",
   },
   // #endregion
 
   // #region 3. Semester
   "Grundlagenlabor 3": {
-    link: "https://www.fhnw.ch/de/studium/module/6010245"
+    link: "https://www.fhnw.ch/de/studium/module/6010245",
   },
   "Modellieren dynamischer Systeme": {
-    link: "https://www.fhnw.ch/de/studium/module/9067170"
+    link: "https://www.fhnw.ch/de/studium/module/9067170",
   },
   "Projekt 3": {
-    link: "https://www.fhnw.ch/de/studium/module/9155749"
+    link: "https://www.fhnw.ch/de/studium/module/9155749",
   },
   "Analysis 3": {
-    link: "https://www.fhnw.ch/de/studium/module/6008406"
+    link: "https://www.fhnw.ch/de/studium/module/6008406",
   },
-  "Elektromagnetismus": {
-    link: "https://www.fhnw.ch/de/studium/module/6013946"
+  Elektromagnetismus: {
+    link: "https://www.fhnw.ch/de/studium/module/6013946",
   },
-  "Analogtechnik": {
-    link: "https://www.fhnw.ch/de/studium/module/9102228"
+  Analogtechnik: {
+    link: "https://www.fhnw.ch/de/studium/module/9102228",
   },
-  "Signalverarbeitung": {
-    link: "https://www.fhnw.ch/de/studium/module/9030028"
+  Signalverarbeitung: {
+    link: "https://www.fhnw.ch/de/studium/module/9030028",
   },
   "Kommunikationstechnik Grundlagen": {
-    link: "https://www.fhnw.ch/de/studium/module/9029168"
+    link: "https://www.fhnw.ch/de/studium/module/9029168",
   },
   "Mikrocontroller - Grundlagen": {
-    link: "https://www.fhnw.ch/de/studium/module/9436642"
+    link: "https://www.fhnw.ch/de/studium/module/9436642",
   },
   // #endregion
 
   // #region 4. Semester
   "Grundlagenlabor 4": {
-    link: "https://www.fhnw.ch/de/studium/module/6010246"
+    link: "https://www.fhnw.ch/de/studium/module/6010246",
   },
   "Digitale Signalverarbeitung - Grundlagen": {
-    link: "https://www.fhnw.ch/de/studium/module/9029185"
+    link: "https://www.fhnw.ch/de/studium/module/9029185",
   },
   "Digitaltechnik 2": {
-    link: "https://www.fhnw.ch/de/studium/module/6007850"
+    link: "https://www.fhnw.ch/de/studium/module/6007850",
   },
-  "Integraltransformationen": {
-    link: "https://www.fhnw.ch/de/studium/module/6008408"
+  Integraltransformationen: {
+    link: "https://www.fhnw.ch/de/studium/module/6008408",
   },
   "Schwingungen und Wellen": {
-    link: "https://www.fhnw.ch/de/studium/module/9093422"
+    link: "https://www.fhnw.ch/de/studium/module/9093422",
   },
   "Analoge Schaltungstechnik - Grundlagen": {
-    link: "https://www.fhnw.ch/de/studium/module/9390399"
+    link: "https://www.fhnw.ch/de/studium/module/9390399",
   },
   "Projekt 4": {
-    link: "https://www.fhnw.ch/de/studium/module/9155761"
+    link: "https://www.fhnw.ch/de/studium/module/9155761",
   },
   // #endregion
 
   // #region 5. Semester
   "Projekt 5": {
-    link: "https://www.fhnw.ch/de/studium/module/6018820"
+    link: "https://www.fhnw.ch/de/studium/module/6018820",
   },
   "Labor Embedded Systems Design 1": {
-    link: "https://www.fhnw.ch/de/studium/module/9436437"
+    link: "https://www.fhnw.ch/de/studium/module/9436437",
   },
-  "Kommunikationstechnik": {
-    link: "https://www.fhnw.ch/de/studium/module/9108204"
+  Kommunikationstechnik: {
+    link: "https://www.fhnw.ch/de/studium/module/9108204",
   },
   "Digitale Schaltungstechnik": {
-    link: "https://www.fhnw.ch/de/studium/module/9029170"
+    link: "https://www.fhnw.ch/de/studium/module/9029170",
   },
   "Digitale Signalverarbeitung": {
-    link: "https://www.fhnw.ch/de/studium/module/9108200"
+    link: "https://www.fhnw.ch/de/studium/module/9108200",
   },
   "Microcontroller Systems Programming": {
-    link: "https://www.fhnw.ch/de/studium/module/9416781"
+    link: "https://www.fhnw.ch/de/studium/module/9416781",
   },
-  "Datennetze": {
-    link: "https://www.fhnw.ch/de/studium/module/9288353"
+  Datennetze: {
+    link: "https://www.fhnw.ch/de/studium/module/9288353",
   },
   "Workshop Linux und Webtechnologien": {
-    link: "https://www.fhnw.ch/de/studium/module/9434920"
+    link: "https://www.fhnw.ch/de/studium/module/9434920",
   },
   // #endregion
 
   // #region 6. Semester
   "Projekt 6": {
-    link: "https://www.fhnw.ch/de/studium/module/9004584"
+    link: "https://www.fhnw.ch/de/studium/module/9004584",
   },
   "Labor Embedded Systems Design 2": {
-    link: "https://www.fhnw.ch/de/studium/module/9436624"
+    link: "https://www.fhnw.ch/de/studium/module/9436624",
   },
   "Digital Communication": {
-    link: "https://www.fhnw.ch/de/studium/module/9107973"
+    link: "https://www.fhnw.ch/de/studium/module/9107973",
   },
   "Embedded Systems Software Design": {
-    link: "https://www.fhnw.ch/de/studium/module/6007864"
+    link: "https://www.fhnw.ch/de/studium/module/6007864",
   },
   "Analog Circuits for Embedded Systems": {
-    link: "https://www.fhnw.ch/de/studium/module/9435525"
+    link: "https://www.fhnw.ch/de/studium/module/9435525",
   },
   // #endregion
 };
