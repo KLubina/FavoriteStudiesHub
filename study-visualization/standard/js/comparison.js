@@ -58,6 +58,13 @@ function loadScript(src) {
 
 document.addEventListener("DOMContentLoaded", () => {
   populateSelectors();
+  // Set defaults
+  document.getElementById("prog1").value = "eth-itet";
+  document.getElementById("prog2").value = "fhzh-elektrotechnik";
+  document.getElementById("prog3").value = "fhzh-cs";
+
+  // Initial load
+  updateComparison();
 });
 
 function populateSelectors() {
@@ -199,18 +206,31 @@ function renderComparison(results, programIds) {
           semModules.forEach((mod) => {
             const item = document.createElement("div");
             item.className = "module-item";
+
+            // Calculate proportional height
+            // Base height for content (padding + text) is roughly 60px
+            // Add scaling factor per ECTS
+            const pixelPerECTS = 12;
+            const baseHeight = 50;
+            const minHeight = baseHeight + mod.ects * pixelPerECTS;
+
+            item.style.minHeight = `${minHeight}px`;
+
             item.style.borderLeft = `4px solid ${getCategoryColor(mod.standardcategory)}`;
             item.style.padding = "10px";
             item.style.marginBottom = "8px";
             item.style.background = "white";
             item.style.borderRadius = "4px";
             item.style.boxShadow = "0 1px 2px rgba(0,0,0,0.05)";
+            item.style.display = "flex";
+            item.style.flexDirection = "column";
+            item.style.justifyContent = "space-between";
 
             item.innerHTML = `
                             <div style="font-weight:600; margin-bottom:4px;">${mod.name}</div>
-                            <div style="font-size:0.85em; color:#666; display:flex; justify-content:space-between;">
+                            <div style="font-size:0.85em; color:#666; display:flex; justify-content:space-between; margin-top: auto;">
                                 <span>${mod.ects} KP</span>
-                                <span style="opacity:0.8">${mod.standardcategory || ""}</span>
+                                <span style="opacity:0.8; text-align:right;">${mod.standardcategory || ""}</span>
                             </div>
                         `;
             list.appendChild(item);
