@@ -14,9 +14,9 @@ window.StudiengangModules = [
     semester: 1,
   },
   {
-    name: "Objektorientierte Programmierung 1",
+    name: "Grundlagenlabor 1",
     ects: 3,
-    standardcategory: "Informatik",
+    standardcategory: "Projekte und Labor",
     year: 1,
     semester: 1,
   },
@@ -35,6 +35,13 @@ window.StudiengangModules = [
     semester: 1,
   },
   {
+    name: "Objektorientierte Programmierung 1",
+    ects: 3,
+    standardcategory: "Informatik",
+    year: 1,
+    semester: 1,
+  },
+  {
     name: "Analysis 1",
     ects: 3,
     standardcategory: "Mathematik und Naturwissenschaften",
@@ -45,13 +52,6 @@ window.StudiengangModules = [
     name: "Lineare Algebra 1",
     ects: 3,
     standardcategory: "Mathematik und Naturwissenschaften",
-    year: 1,
-    semester: 1,
-  },
-  {
-    name: "Grundlagenlabor 1",
-    ects: 3,
-    standardcategory: "Projekte und Labor",
     year: 1,
     semester: 1,
   },
@@ -76,20 +76,6 @@ window.StudiengangModules = [
   // === 2. SEMESTER ===
 
   {
-    name: "Analysis 2",
-    ects: 3,
-    standardcategory: "Mathematik und Naturwissenschaften",
-    year: 1,
-    semester: 2,
-  },
-  {
-    name: "Mechanik",
-    ects: 3,
-    standardcategory: "Mathematik und Naturwissenschaften",
-    year: 1,
-    semester: 2,
-  },
-  {
     name: "Projekt 2",
     ects: 6,
     standardcategory: "Projekte und Labor",
@@ -100,6 +86,13 @@ window.StudiengangModules = [
     name: "Grundlagenlabor 2",
     ects: 3,
     standardcategory: "Projekte und Labor",
+    year: 1,
+    semester: 2,
+  },
+  {
+    name: "Mechanik",
+    ects: 3,
+    standardcategory: "Mathematik und Naturwissenschaften",
     year: 1,
     semester: 2,
   },
@@ -125,6 +118,13 @@ window.StudiengangModules = [
     semester: 2,
   },
   {
+    name: "Analysis 2",
+    ects: 3,
+    standardcategory: "Mathematik und Naturwissenschaften",
+    year: 1,
+    semester: 2,
+  },
+  {
     name: "Kommunikation",
     ects: 3,
     standardcategory: "Kommunikation",
@@ -145,20 +145,6 @@ window.StudiengangModules = [
   // === 3. SEMESTER ===
 
   {
-    name: "Grundlagenlabor 3",
-    ects: 3,
-    standardcategory: "Projekte und Labor",
-    year: 2,
-    semester: 3,
-  },
-  {
-    name: "Modellieren dynamischer Systeme",
-    ects: 3,
-    standardcategory: "Electrical Engineering",
-    year: 2,
-    semester: 3,
-  },
-  {
     name: "Projekt 3",
     ects: 6,
     standardcategory: "Projekte und Labor",
@@ -166,9 +152,9 @@ window.StudiengangModules = [
     semester: 3,
   },
   {
-    name: "Analysis 3",
+    name: "Grundlagenlabor 3",
     ects: 3,
-    standardcategory: "Mathematik und Naturwissenschaften",
+    standardcategory: "Projekte und Labor",
     year: 2,
     semester: 3,
   },
@@ -180,7 +166,7 @@ window.StudiengangModules = [
     semester: 3,
   },
   {
-    name: "Analogtechnik",
+    name: "Modellieren dynamischer Systeme",
     ects: 3,
     standardcategory: "Electrical Engineering",
     year: 2,
@@ -201,9 +187,23 @@ window.StudiengangModules = [
     semester: 3,
   },
   {
+    name: "Analogtechnik",
+    ects: 3,
+    standardcategory: "Electrical Engineering",
+    year: 2,
+    semester: 3,
+  },
+  {
     name: "Mikrocontroller - Grundlagen",
     ects: 3,
     standardcategory: "Informatik",
+    year: 2,
+    semester: 3,
+  },
+  {
+    name: "Analysis 3",
+    ects: 3,
+    standardcategory: "Mathematik und Naturwissenschaften",
     year: 2,
     semester: 3,
   },
@@ -213,6 +213,13 @@ window.StudiengangModules = [
   // #region 4. Semester
   // === 4. SEMESTER ===
 
+  {
+    name: "Projekt 4",
+    ects: 6,
+    standardcategory: "Projekte und Labor",
+    year: 2,
+    semester: 4,
+  },
   {
     name: "Grundlagenlabor 4",
     ects: 3,
@@ -242,20 +249,6 @@ window.StudiengangModules = [
     semester: 4,
   },
   {
-    name: "Projekt 4",
-    ects: 6,
-    standardcategory: "Projekte und Labor",
-    year: 2,
-    semester: 4,
-  },
-  {
-    name: "Englisch",
-    ects: 3,
-    standardcategory: "Kommunikation",
-    year: 2,
-    semester: 4,
-  },
-  {
     name: "Betriebswirtschaftslehre",
     ects: 3,
     standardcategory: "Geistes- und Sozialwissenschaft",
@@ -266,6 +259,13 @@ window.StudiengangModules = [
     name: "Geistes- und Sozialwissenschaften",
     ects: 3,
     standardcategory: "Geistes- und Sozialwissenschaft",
+    year: 2,
+    semester: 4,
+  },
+  {
+    name: "Englisch",
+    ects: 3,
+    standardcategory: "Kommunikation",
     year: 2,
     semester: 4,
   },
@@ -325,16 +325,16 @@ window.StudiengangModules = [
     semester: 5,
   },
   {
-    name: "Englisch",
+    name: "Workshop Linux und Webtechnologien",
     ects: 3,
-    standardcategory: "Kommunikation",
+    standardcategory: "Informatik",
     year: 3,
     semester: 5,
   },
   {
-    name: "Workshop Linux und Webtechnologien",
+    name: "Englisch",
     ects: 3,
-    standardcategory: "Informatik",
+    standardcategory: "Kommunikation",
     year: 3,
     semester: 5,
   },
