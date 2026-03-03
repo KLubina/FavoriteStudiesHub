@@ -4,16 +4,16 @@
 window.StudiengangModules = [
   // #region 1. Semester
   {
-    name: "Wirtschaft für Ingenieure",
-    ects: 2,
-    standardcategory: "kontext",
+    name: "Physik 1",
+    ects: 4,
+    standardcategory: "mathe-nawi",
     year: 1,
     semester: 1,
   },
   {
-    name: "Messtechnik Projekt",
-    ects: 4,
-    standardcategory: "projekt",
+    name: "Werkstoffe der Elektrotechnik",
+    ects: 2,
+    standardcategory: "fach",
     year: 1,
     semester: 1,
   },
@@ -25,9 +25,9 @@ window.StudiengangModules = [
     semester: 1,
   },
   {
-    name: "Werkstoffe der Elektrotechnik",
-    ects: 2,
-    standardcategory: "fach",
+    name: "Messtechnik Projekt",
+    ects: 4,
+    standardcategory: "projekt",
     year: 1,
     semester: 1,
   },
@@ -46,13 +46,6 @@ window.StudiengangModules = [
     semester: 1,
   },
   {
-    name: "Lineare Algebra 1",
-    ects: 4,
-    standardcategory: "mathe-nawi",
-    year: 1,
-    semester: 1,
-  },
-  {
     name: "Analysis 1",
     ects: 4,
     standardcategory: "mathe-nawi",
@@ -60,9 +53,16 @@ window.StudiengangModules = [
     semester: 1,
   },
   {
-    name: "Physik 1",
+    name: "Lineare Algebra 1",
     ects: 4,
     standardcategory: "mathe-nawi",
+    year: 1,
+    semester: 1,
+  },
+  {
+    name: "Wirtschaft für Ingenieure",
+    ects: 2,
+    standardcategory: "kontext",
     year: 1,
     semester: 1,
   },
@@ -70,16 +70,9 @@ window.StudiengangModules = [
 
   // #region 2. Semester
   {
-    name: "Communication Competence Basic",
-    ects: 2,
-    standardcategory: "kontext",
-    year: 1,
-    semester: 2,
-  },
-  {
-    name: "Digitaltechnik-Projekt",
+    name: "Physik 2",
     ects: 4,
-    standardcategory: "projekt",
+    standardcategory: "mathe-nawi",
     year: 1,
     semester: 2,
   },
@@ -98,16 +91,16 @@ window.StudiengangModules = [
     semester: 2,
   },
   {
-    name: "Informatik 2",
+    name: "Digitaltechnik-Projekt",
     ects: 4,
-    standardcategory: "fach",
+    standardcategory: "projekt",
     year: 1,
     semester: 2,
   },
   {
-    name: "Lineare Algebra 2",
+    name: "Informatik 2",
     ects: 4,
-    standardcategory: "mathe-nawi",
+    standardcategory: "fach",
     year: 1,
     semester: 2,
   },
@@ -119,31 +112,22 @@ window.StudiengangModules = [
     semester: 2,
   },
   {
-    name: "Physik 2",
+    name: "Lineare Algebra 2",
     ects: 4,
     standardcategory: "mathe-nawi",
+    year: 1,
+    semester: 2,
+  },
+  {
+    name: "Communication Competence Basic",
+    ects: 2,
+    standardcategory: "kontext",
     year: 1,
     semester: 2,
   },
   // #endregion
 
   // #region 3. Semester
-  {
-    name: "Wahlpflichtmodul Kommunikation",
-    ects: 2,
-    standardcategory: "wahlpflicht",
-    year: 2,
-    semester: 1,
-    isPlaceholder: true,
-    wahlmodulSource: "wahlmodule-data.js",
-  },
-  {
-    name: "Electronics Project",
-    ects: 4,
-    standardcategory: "projekt",
-    year: 2,
-    semester: 1,
-  },
   {
     name: "Energie- und Antriebstechnik",
     ects: 4,
@@ -166,9 +150,23 @@ window.StudiengangModules = [
     semester: 1,
   },
   {
+    name: "Electronics Project",
+    ects: 4,
+    standardcategory: "projekt",
+    year: 2,
+    semester: 1,
+  },
+  {
     name: "Computertechnik 1",
     ects: 4,
     standardcategory: "fach",
+    year: 2,
+    semester: 1,
+  },
+  {
+    name: "Analysis 3",
+    ects: 4,
+    standardcategory: "mathe-nawi",
     year: 2,
     semester: 1,
   },
@@ -180,28 +178,21 @@ window.StudiengangModules = [
     semester: 1,
   },
   {
-    name: "Analysis 3",
-    ects: 4,
-    standardcategory: "mathe-nawi",
+    name: "Wahlpflichtmodul Kommunikation",
+    ects: 2,
+    standardcategory: "wahlpflicht",
     year: 2,
     semester: 1,
+    isPlaceholder: true,
+    wahlmodulSource: "wahlmodule-data.js",
   },
   // #endregion
 
   // #region 4. Semester
   {
-    name: "Wahlpflichtmodul Kommunikation",
-    ects: 2,
-    standardcategory: "wahlpflicht",
-    year: 2,
-    semester: 2,
-    isPlaceholder: true,
-    wahlmodulSource: "wahlmodule-data.js",
-  },
-  {
-    name: "Electronics Project 2",
+    name: "Physik 3: Felder und Wellen",
     ects: 4,
-    standardcategory: "projekt",
+    standardcategory: "mathe-nawi",
     year: 2,
     semester: 2,
   },
@@ -227,6 +218,13 @@ window.StudiengangModules = [
     semester: 2,
   },
   {
+    name: "Electronics Project 2",
+    ects: 4,
+    standardcategory: "projekt",
+    year: 2,
+    semester: 2,
+  },
+  {
     name: "Computertechnik 2",
     ects: 4,
     standardcategory: "fach",
@@ -241,11 +239,13 @@ window.StudiengangModules = [
     semester: 2,
   },
   {
-    name: "Physik 3: Felder und Wellen",
-    ects: 4,
-    standardcategory: "mathe-nawi",
+    name: "Wahlpflichtmodul Kommunikation",
+    ects: 2,
+    standardcategory: "wahlpflicht",
     year: 2,
     semester: 2,
+    isPlaceholder: true,
+    wahlmodulSource: "wahlmodule-data.js",
   },
   // #endregion
 
