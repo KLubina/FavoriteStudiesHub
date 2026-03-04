@@ -117,8 +117,8 @@
 
         /* ── Module block (re-uses .modul sizing) ── */
         .modul {
-            min-width: 120px;
-            max-width: 170px;
+            min-width: 24px;
+            height: 56px;
             padding: 6px 6px 5px;
             border-radius: 5px;
             color: #fff;
@@ -131,6 +131,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            overflow: hidden;
         }
 
         .modul:hover {
@@ -141,13 +144,19 @@
         .modul-titel {
             font-weight: 700;
             font-size: 12px;
-            line-height: 1.3;
-            margin-bottom: 3px;
+            line-height: 1.2;
+            margin-bottom: 2px;
+            overflow: hidden;
+            width: 100%;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
 
         .modul-kp {
             font-size: 11px;
             opacity: 0.9;
+            flex-shrink: 0;
         }
 
         /* indicators */
@@ -390,8 +399,9 @@
             const iconsHtml = (m.icons && m.icons.length)
                 ? `<div class="indicators-container">${m.icons.map(i => `<span class="indicator">${i}</span>`).join("")}</div>`
                 : "";
+            const w = m.ects > 0 ? m.ects * 26 : 100;
             return `
-      <div class="modul${cls}" style="background:${bg}">
+      <div class="modul${cls}" style="background:${bg}; width:${w}px; flex:0 0 ${w}px;">
         ${iconsHtml}
         <div class="modul-titel">${m.name}</div>
         <div class="modul-kp">${m.ects > 0 ? m.ects + " KP" : "Wahl"}</div>
