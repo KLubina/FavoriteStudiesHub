@@ -96,6 +96,10 @@
             background: #006b3c;
         }
 
+        .uni-label.eth-cs {
+            background: #1a237e;
+        }
+
         .uni-label.zhaw-cs {
             background: #1564ad;
         }
@@ -263,7 +267,8 @@
     </div>
 
     <h1>Elektrotechnik & Informatik – Vergleich</h1>
-    <h2 class="json-subtitle">ETH Zürich (ITET) &nbsp;·&nbsp; ZHAW Elektrotechnik &nbsp;·&nbsp; ZHAW Informatik</h2>
+    <h2 class="json-subtitle">ETH Zürich (ITET) &nbsp;·&nbsp; ZHAW Elektrotechnik &nbsp;·&nbsp; ETH Zürich Informatik
+        &nbsp;·&nbsp; ZHAW Informatik</h2>
 
     <div id="vergleich-root"></div>
 
@@ -272,6 +277,8 @@
     <script>var ETH_DETAILS = window.StudiengangModuleDetails || {}; window.StudiengangModuleDetails = {};</script>
     <script src="../fhzh-elektrotechnik/data/basic-modules-details.js"></script>
     <script>var ZHAW_DETAILS = window.StudiengangModuleDetails || {}; window.StudiengangModuleDetails = {};</script>
+    <script src="../eth-cs/data/basic-modules-details.js"></script>
+    <script>var ETH_CS_DETAILS = window.StudiengangModuleDetails || {}; window.StudiengangModuleDetails = {};</script>
     <script src="../fhzh-cs/data/basic-modules-details.js"></script>
     <script>var ZHAW_CS_DETAILS = window.StudiengangModuleDetails || {};</script>
 
@@ -293,6 +300,15 @@
             "projekt": "#7c3aed",
             "kontext": "#059669",
             "wahlpflicht": "#ea580c",
+        };
+        const ETH_CS_COLORS = {
+            "cs-pure": "#1e3a8a",
+            "cs-cse": "#0891b2",
+            "cs-cse-wahl": "#06b6d4",
+            "math": "#7c3aed",
+            "algo": "#db2777",
+            "ergaenzung": "#f97316",
+            "wissenschaft": "#16a34a",
         };
         const ZHAW_CS_COLORS = {
             "mathe-nawi": "#dc2626",
@@ -343,6 +359,32 @@
             { name: "Technische Informatik", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: false, icons: ["📖"] },
             { name: "Numerische Methoden", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: false, icons: ["📝", "📖"] },
             { name: "Wahrscheinlichkeitstheorie & Statistik", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: false, icons: ["📝", "📖"] },
+        ];
+
+        /* ── ETH Zürich Informatik ── */
+        const ETH_CS = [
+            // === Jahr 1 · HS ===
+            { name: "Einführung in die Programmierung", ects: 7, cat: "cs-pure", y: 1, hs: true, icons: [] },
+            { name: "Lineare Algebra", ects: 7, cat: "math", y: 1, hs: true, icons: [] },
+            { name: "Algorithmen und Datenstrukturen", ects: 7, cat: "cs-cse", y: 1, hs: true, icons: [] },
+            { name: "Diskrete Mathematik", ects: 7, cat: "math", y: 1, hs: true, icons: [] },
+            // === Jahr 1 · SS ===
+            { name: "Analysis I", ects: 7, cat: "math", y: 1, hs: false, icons: [] },
+            { name: "Parallele Programmierung", ects: 7, cat: "cs-cse", y: 1, hs: false, icons: [] },
+            { name: "Digital Design and Computer Architecture", ects: 7, cat: "cs-pure", y: 1, hs: false, icons: [] },
+            { name: "Algorithmen und Wahrscheinlichkeit", ects: 4, cat: "algo", y: 1, hs: false, icons: [] },
+            // === Jahr 2 · HS ===
+            { name: "Numerische Methoden für Informatik", ects: 8, cat: "cs-cse", y: 2, hs: true, icons: [] },
+            { name: "Analysis II", ects: 5, cat: "math", y: 2, hs: true, icons: [] },
+            { name: "Theoretische Informatik", ects: 7, cat: "cs-pure", y: 2, hs: true, icons: [] },
+            { name: "Systems Programming and Computer Architecture", ects: 7, cat: "cs-cse", y: 2, hs: true, icons: [] },
+            // === Jahr 2 · SS ===
+            { name: "Wahrscheinlichkeit und Statistik", ects: 5, cat: "math", y: 2, hs: false, icons: [] },
+            { name: "Computer Networks", ects: 7, cat: "cs-cse-wahl", y: 2, hs: false, icons: [] },
+            { name: "Data Modelling and Databases", ects: 7, cat: "cs-cse-wahl", y: 2, hs: false, icons: [] },
+            { name: "Formal Methods and Functional Programming", ects: 7, cat: "cs-cse-wahl", y: 2, hs: false, icons: [] },
+            { name: "Ergänzung", ects: 5, cat: "ergaenzung", y: 2, hs: false, icons: [], placeholder: true },
+            { name: "Wissenschaft im Kontext", ects: 6, cat: "wissenschaft", y: 2, hs: false, icons: [] },
         ];
 
         /* ── ZHAW Elektrotechnik ── */
@@ -459,12 +501,13 @@
     </div>`;
         }
 
-        function renderSemester(semTitle, ethMods, zhawMods, zhawCsMods) {
+        function renderSemester(semTitle, ethMods, zhawMods, ethCsMods, zhawCsMods) {
             return `
   <div class="vergleich-semester">
     <div class="vergleich-semester-titel">${semTitle}</div>
     ${renderUniRow("ETH Zürich<br>ITET", "eth", ethMods, ETH_COLORS, "eth")}
     ${renderUniRow("ZHAW<br>Elektrotechnik", "zhaw", zhawMods, ZHAW_COLORS, "zhaw")}
+    ${renderUniRow("ETH Zürich<br>Informatik", "eth-cs", ethCsMods, ETH_CS_COLORS, "eth-cs")}
     ${renderUniRow("ZHAW<br>Informatik", "zhaw-cs", zhawCsMods, ZHAW_CS_COLORS, "zhaw-cs")}
   </div>`;
         }
@@ -483,11 +526,11 @@
 
             yearHtml += renderSemester(
                 "Herbstsemester",
-                filter(ETH, yr, true), filter(ZHAW, yr, true), filter(ZHAW_CS, yr, true)
+                filter(ETH, yr, true), filter(ZHAW, yr, true), filter(ETH_CS, yr, true), filter(ZHAW_CS, yr, true)
             );
             yearHtml += renderSemester(
                 "Sommersemester",
-                filter(ETH, yr, false), filter(ZHAW, yr, false), filter(ZHAW_CS, yr, false)
+                filter(ETH, yr, false), filter(ZHAW, yr, false), filter(ETH_CS, yr, false), filter(ZHAW_CS, yr, false)
             );
 
             yearHtml += `</div>`;
@@ -497,7 +540,7 @@
         /* ================================================================
            TOOLTIP
         ================================================================ */
-        const DETAIL_MAPS = { eth: ETH_DETAILS, zhaw: ZHAW_DETAILS, "zhaw-cs": ZHAW_CS_DETAILS };
+        const DETAIL_MAPS = { eth: ETH_DETAILS, zhaw: ZHAW_DETAILS, "eth-cs": ETH_CS_DETAILS, "zhaw-cs": ZHAW_CS_DETAILS };
 
         document.addEventListener("click", function (e) {
             const tooltipEl = document.getElementById("tooltip");

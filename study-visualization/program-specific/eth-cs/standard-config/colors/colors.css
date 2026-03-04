@@ -1,0 +1,15 @@
+/* ==== ETH-CS - COLOR VARIABLES ==== */
+/* ETH Computer Science Program */
+
+[data-studiengang="eth-cs"] {
+    /* Category-specific colors */
+    --color-cs-pure: #1e3a8a;
+    --color-cs-cse: #0891b2;
+    --color-cs-cse-wahl: #06b6d4;
+    --color-math: #7c3aed;
+    --color-algo: #db2777;
+    --color-ergaenzung: #f97316;
+    --color-wissenschaft: #16a34a;
+    --color-spezialisierung: #eab308;
+    --color-wahlfaecher: #8b5cf6;
+}
