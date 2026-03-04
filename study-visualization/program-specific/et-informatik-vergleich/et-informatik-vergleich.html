@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elektrotechnik & Informatik – ETHZ / ZHAW / FHNW</title>
+    <title>Elektrotechnik & Informatik – ETHZ / ZHAW</title>
 
     <link rel="stylesheet" href="../../standard/css/core/variables.css">
     <link rel="stylesheet" href="../../standard/css/core/layout.css">
@@ -94,10 +94,6 @@
 
         .uni-label.zhaw {
             background: #006b3c;
-        }
-
-        .uni-label.fhnw {
-            background: #8b2222;
         }
 
         .uni-label.zhaw-cs {
@@ -267,8 +263,7 @@
     </div>
 
     <h1>Elektrotechnik & Informatik – Vergleich</h1>
-    <h2 class="json-subtitle">ETH Zürich (ITET) &nbsp;·&nbsp; ZHAW Elektrotechnik &nbsp;·&nbsp; FHNW EIT &nbsp;·&nbsp;
-        ZHAW Informatik</h2>
+    <h2 class="json-subtitle">ETH Zürich (ITET) &nbsp;·&nbsp; ZHAW Elektrotechnik &nbsp;·&nbsp; ZHAW Informatik</h2>
 
     <div id="vergleich-root"></div>
 
@@ -277,8 +272,6 @@
     <script>var ETH_DETAILS = window.StudiengangModuleDetails || {}; window.StudiengangModuleDetails = {};</script>
     <script src="../fhzh-elektrotechnik/data/basic-modules-details.js"></script>
     <script>var ZHAW_DETAILS = window.StudiengangModuleDetails || {}; window.StudiengangModuleDetails = {};</script>
-    <script src="../fhnw-eit/data/basic-modules-details.js"></script>
-    <script>var FHNW_DETAILS = window.StudiengangModuleDetails || {}; window.StudiengangModuleDetails = {};</script>
     <script src="../fhzh-cs/data/basic-modules-details.js"></script>
     <script>var ZHAW_CS_DETAILS = window.StudiengangModuleDetails || {};</script>
 
@@ -300,16 +293,6 @@
             "projekt": "#7c3aed",
             "kontext": "#059669",
             "wahlpflicht": "#ea580c",
-        };
-        const FHNW_COLORS = {
-            "Mathematik und Naturwissenschaften": "#dc2626",
-            "Electrical Engineering": "#ea580c",
-            "Informatik": "#7c3aed",
-            "Projekte und Labor": "#0f766e",
-            "Kommunikation": "#16a34a",
-            "Fachvertiefung": "#0284c7",
-            "Fachergänzung": "#0891b2",
-            "Geistes- und Sozialwissenschaft": "#7c2d12",
         };
         const ZHAW_CS_COLORS = {
             "mathe-nawi": "#dc2626",
@@ -403,49 +386,6 @@
             { name: "WPM Kommunikation", ects: 2, cat: "wahlpflicht", y: 2, hs: false, icons: [], placeholder: true },
         ];
 
-        /* ── FHNW EIT (Embedded Systems Design) ── */
-        const FHNW = [
-            // === Jahr 1 · HS ===
-            { name: "Projekt 1", ects: 6, cat: "Projekte und Labor", y: 1, hs: true, icons: ["📖"] },
-            { name: "Grundlagenlabor 1", ects: 3, cat: "Projekte und Labor", y: 1, hs: true, icons: ["📖"] },
-            { name: "Allgemeine Elektrotechnik 1", ects: 3, cat: "Electrical Engineering", y: 1, hs: true, icons: ["📝", "📖"] },
-            { name: "Konvergenz Elektrotechnik", ects: 3, cat: "Electrical Engineering", y: 1, hs: true, icons: ["📖"] },
-            { name: "OOP 1", ects: 3, cat: "Informatik", y: 1, hs: true, icons: ["📝", "📖"] },
-            { name: "Analysis 1", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 1, hs: true, icons: ["📝", "📖"] },
-            { name: "Lineare Algebra 1", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 1, hs: true, icons: ["📝", "📖"] },
-            { name: "Kommunikation", ects: 3, cat: "Kommunikation", y: 1, hs: true, icons: [] },
-            { name: "Englisch", ects: 3, cat: "Kommunikation", y: 1, hs: true, icons: [] },
-            // === Jahr 1 · SS ===
-            { name: "Projekt 2", ects: 6, cat: "Projekte und Labor", y: 1, hs: false, icons: ["📖"] },
-            { name: "Grundlagenlabor 2", ects: 3, cat: "Projekte und Labor", y: 1, hs: false, icons: ["📖"] },
-            { name: "Mechanik", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 1, hs: false, icons: ["📝", "📖"] },
-            { name: "Allgemeine Elektrotechnik 2", ects: 3, cat: "Electrical Engineering", y: 1, hs: false, icons: ["📝", "📖"] },
-            { name: "Digitaltechnik 1", ects: 3, cat: "Electrical Engineering", y: 1, hs: false, icons: ["📝", "📖"] },
-            { name: "OOP 2", ects: 3, cat: "Informatik", y: 1, hs: false, icons: ["📝", "📖"] },
-            { name: "Analysis 2", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 1, hs: false, icons: ["📝", "📖"] },
-            { name: "Kommunikation", ects: 3, cat: "Kommunikation", y: 1, hs: false, icons: [] },
-            { name: "Englisch", ects: 3, cat: "Kommunikation", y: 1, hs: false, icons: [] },
-            // === Jahr 2 · HS ===
-            { name: "Projekt 3", ects: 6, cat: "Projekte und Labor", y: 2, hs: true, icons: ["📖"] },
-            { name: "Grundlagenlabor 3", ects: 3, cat: "Projekte und Labor", y: 2, hs: true, icons: ["📖"] },
-            { name: "Elektromagnetismus", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 2, hs: true, icons: [] },
-            { name: "Modellieren dynam. Systeme", ects: 3, cat: "Electrical Engineering", y: 2, hs: true, icons: [] },
-            { name: "Signalverarbeitung", ects: 3, cat: "Electrical Engineering", y: 2, hs: true, icons: [] },
-            { name: "Kommunikationstechnik Grundl.", ects: 3, cat: "Electrical Engineering", y: 2, hs: true, icons: [] },
-            { name: "Analogtechnik", ects: 3, cat: "Electrical Engineering", y: 2, hs: true, icons: [] },
-            { name: "Mikrocontroller – Grundlagen", ects: 3, cat: "Informatik", y: 2, hs: true, icons: [] },
-            { name: "Analysis 3", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 2, hs: true, icons: [] },
-            // === Jahr 2 · SS ===
-            { name: "Projekt 4", ects: 6, cat: "Projekte und Labor", y: 2, hs: false, icons: ["📖"] },
-            { name: "Grundlagenlabor 4", ects: 3, cat: "Projekte und Labor", y: 2, hs: false, icons: ["📖"] },
-            { name: "Digit. Signalverarbeitung Grdl.", ects: 3, cat: "Electrical Engineering", y: 2, hs: false, icons: [] },
-            { name: "Digitaltechnik 2", ects: 3, cat: "Electrical Engineering", y: 2, hs: false, icons: [] },
-            { name: "Analoge Schaltungstechnik Grdl.", ects: 3, cat: "Electrical Engineering", y: 2, hs: false, icons: [] },
-            { name: "Betriebswirtschaftslehre", ects: 3, cat: "Geistes- und Sozialwissenschaft", y: 2, hs: false, icons: [] },
-            { name: "Geistes- und Sozialwiss.", ects: 3, cat: "Geistes- und Sozialwissenschaft", y: 2, hs: false, icons: [] },
-            { name: "Englisch", ects: 3, cat: "Kommunikation", y: 2, hs: false, icons: [] },
-        ];
-
         /* ── ZHAW Informatik ── */
         const ZHAW_CS = [
             // === Jahr 1 · HS ===
@@ -519,13 +459,12 @@
     </div>`;
         }
 
-        function renderSemester(semTitle, ethMods, zhawMods, fhnwMods, zhawCsMods) {
+        function renderSemester(semTitle, ethMods, zhawMods, zhawCsMods) {
             return `
   <div class="vergleich-semester">
     <div class="vergleich-semester-titel">${semTitle}</div>
     ${renderUniRow("ETH Zürich<br>ITET", "eth", ethMods, ETH_COLORS, "eth")}
     ${renderUniRow("ZHAW<br>Elektrotechnik", "zhaw", zhawMods, ZHAW_COLORS, "zhaw")}
-    ${renderUniRow("FHNW<br>EIT", "fhnw", fhnwMods, FHNW_COLORS, "fhnw")}
     ${renderUniRow("ZHAW<br>Informatik", "zhaw-cs", zhawCsMods, ZHAW_CS_COLORS, "zhaw-cs")}
   </div>`;
         }
@@ -544,11 +483,11 @@
 
             yearHtml += renderSemester(
                 "Herbstsemester",
-                filter(ETH, yr, true), filter(ZHAW, yr, true), filter(FHNW, yr, true), filter(ZHAW_CS, yr, true)
+                filter(ETH, yr, true), filter(ZHAW, yr, true), filter(ZHAW_CS, yr, true)
             );
             yearHtml += renderSemester(
                 "Sommersemester",
-                filter(ETH, yr, false), filter(ZHAW, yr, false), filter(FHNW, yr, false), filter(ZHAW_CS, yr, false)
+                filter(ETH, yr, false), filter(ZHAW, yr, false), filter(ZHAW_CS, yr, false)
             );
 
             yearHtml += `</div>`;
@@ -558,7 +497,7 @@
         /* ================================================================
            TOOLTIP
         ================================================================ */
-        const DETAIL_MAPS = { eth: ETH_DETAILS, zhaw: ZHAW_DETAILS, fhnw: FHNW_DETAILS, "zhaw-cs": ZHAW_CS_DETAILS };
+        const DETAIL_MAPS = { eth: ETH_DETAILS, zhaw: ZHAW_DETAILS, "zhaw-cs": ZHAW_CS_DETAILS };
 
         document.addEventListener("click", function (e) {
             const tooltipEl = document.getElementById("tooltip");
