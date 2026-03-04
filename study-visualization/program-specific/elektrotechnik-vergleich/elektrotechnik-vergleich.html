@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrotechnik – ETHZ / ZHAW / FHNW</title>
+
+    <link rel="stylesheet" href="../../standard/css/core/variables.css">
+    <link rel="stylesheet" href="../../standard/css/core/layout.css">
+    <link rel="stylesheet" href="../../standard/css/core/typography.css">
+    <link rel="stylesheet" href="../../standard/css/core/hub-button.css">
+    <link rel="stylesheet" href="../../standard/css/core/module.css">
+    <link rel="stylesheet" href="../../standard/css/optional/indicators.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px 30px 60px;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 4px;
+        }
+
+        h2.json-subtitle {
+            font-size: 15px;
+            color: #666;
+            margin: 0 0 30px;
+            font-weight: 400;
+        }
+
+        /* ── Year block ── */
+        .vergleich-jahr {
+            margin-bottom: 50px;
+        }
+
+        .vergleich-jahr-titel {
+            font-size: 22px;
+            font-weight: 700;
+            color: #222;
+            border-bottom: 3px solid #bbb;
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+        }
+
+        /* ── Semester block ── */
+        .vergleich-semester {
+            margin-bottom: 36px;
+        }
+
+        .vergleich-semester-titel {
+            font-size: 16px;
+            font-weight: 700;
+            color: #444;
+            background: #e8e8e8;
+            padding: 6px 14px;
+            border-radius: 6px;
+            margin-bottom: 14px;
+            display: inline-block;
+        }
+
+        /* ── University row ── */
+        .uni-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0;
+            margin-bottom: 10px;
+        }
+
+        .uni-label {
+            width: 140px;
+            min-width: 140px;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 10px 8px 0;
+            color: #fff;
+            border-radius: 6px 0 0 6px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            letter-spacing: 0.03em;
+        }
+
+        .uni-label.eth {
+            background: #1a4a7a;
+        }
+
+        .uni-label.zhaw {
+            background: #006b3c;
+        }
+
+        .uni-label.fhnw {
+            background: #8b2222;
+        }
+
+        .uni-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--module-gap, 5px);
+            padding: 6px 10px;
+            background: #fff;
+            border-radius: 0 6px 6px 0;
+            border: 1px solid #e0e0e0;
+            border-left: none;
+            flex: 1;
+            min-height: 52px;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        /* ── Module block (re-uses .modul sizing) ── */
+        .modul {
+            min-width: 120px;
+            max-width: 170px;
+            padding: 6px 6px 5px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            position: relative;
+            cursor: default;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+            transition: transform 0.15s, box-shadow 0.15s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modul:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .modul-titel {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 1.3;
+            margin-bottom: 3px;
+        }
+
+        .modul-kp {
+            font-size: 11px;
+            opacity: 0.9;
+        }
+
+        /* indicators */
+        .indicators-container {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 2px;
+        }
+
+        .indicator {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+        }
+
+        /* placeholder module */
+        .modul.placeholder {
+            opacity: 0.55;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hub-button-container">
+        <a href="../../../index.html" class="hub-button">← Zurück zum Hub</a>
+    </div>
+
+    <h1>Elektrotechnik – Vergleich</h1>
+    <h2 class="json-subtitle">ETH Zürich (ITET) &nbsp;·&nbsp; ZHAW Elektrotechnik &nbsp;·&nbsp; FHNW EIT</h2>
+
+    <div id="vergleich-root"></div>
+
+    <script>
+        /* ================================================================
+           COLOR MAPS
+        ================================================================ */
+        const ETH_COLORS = {
+            "Obligatorische Fächer": "#0D5B8C",
+            "Obligatorische Praktikum": "#00A0E3",
+            "Wissenschaftliche Arbeit": "#888888",
+            "Kernfächer nach Schwerpunkt": "#DD98DD",
+            "Weitere Wahl-Grundlagenfächer": "#FFD700",
+            "Wahl Praktika-Projekte-Seminare": "#4CA64C",
+        };
+        const ZHAW_COLORS = {
+            "mathe-nawi": "#dc2626",
+            "fach": "#0284c7",
+            "projekt": "#7c3aed",
+            "kontext": "#059669",
+            "wahlpflicht": "#ea580c",
+        };
+        const FHNW_COLORS = {
+            "Mathematik und Naturwissenschaften": "#dc2626",
+            "Electrical Engineering": "#ea580c",
+            "Informatik": "#7c3aed",
+            "Projekte und Labor": "#0f766e",
+            "Kommunikation": "#16a34a",
+            "Fachvertiefung": "#0284c7",
+            "Fachergänzung": "#0891b2",
+            "Geistes- und Sozialwissenschaft": "#7c2d12",
+        };
+
+        /* ================================================================
+           ICON HELPERS  (📝=exam  📖=link  📚=kurslink  🎥=video)
+        ================================================================ */
+        function icons(...list) { return list; }
+
+        /* ================================================================
+           MODULE DATA
+        ================================================================ */
+
+        /* ── ETH ITET ── */
+        const ETH = [
+            // === Jahr 1 · HS ===
+            { name: "Technische Mechanik", ects: 4, cat: "Obligatorische Fächer", y: 1, hs: true, icons: ["📝", "📖", "📚"] },
+            { name: "Netzwerke und Schaltungen I", ects: 4, cat: "Obligatorische Fächer", y: 1, hs: true, icons: ["📝", "📖", "📚"] },
+            { name: "Digitaltechnik", ects: 4, cat: "Obligatorische Fächer", y: 1, hs: true, icons: ["📖", "📚"] },
+            { name: "Digitaltechnik Praktikum", ects: 1, cat: "Obligatorische Praktikum", y: 1, hs: true, icons: ["📖"] },
+            { name: "Vorkurs Informatik", ects: 1, cat: "Obligatorische Praktikum", y: 1, hs: true, icons: ["📖", "📚"] },
+            { name: "Analysis 1", ects: 8, cat: "Obligatorische Fächer", y: 1, hs: true, icons: ["🎥", "📝", "📖", "📚"] },
+            { name: "Lineare Algebra", ects: 5, cat: "Obligatorische Fächer", y: 1, hs: true, icons: ["🎥", "📝", "📖", "📚"] },
+            // === Jahr 1 · SS ===
+            { name: "Physik I", ects: 4, cat: "Obligatorische Fächer", y: 1, hs: false, icons: ["🎥", "📝", "📖"] },
+            { name: "Netzwerke und Schaltungen II", ects: 8, cat: "Obligatorische Fächer", y: 1, hs: false, icons: ["🎥", "📖", "📚"] },
+            { name: "Netzwerke und Schaltungen Praktikum", ects: 1, cat: "Obligatorische Praktikum", y: 1, hs: false, icons: ["📖"] },
+            { name: "Informatik I", ects: 4, cat: "Obligatorische Fächer", y: 1, hs: false, icons: ["🎥", "📝", "📖"] },
+            { name: "Analysis 2", ects: 8, cat: "Obligatorische Fächer", y: 1, hs: false, icons: ["🎥", "📝", "📖", "📚"] },
+            { name: "Mathematische Methoden", ects: 4, cat: "Obligatorische Fächer", y: 1, hs: false, icons: ["📝", "📖"] },
+            // === Jahr 2 · HS ===
+            { name: "Physik II", ects: 8, cat: "Obligatorische Fächer", y: 2, hs: true, icons: ["📝", "📖"] },
+            { name: "Signal- und Systemtheorie I", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: true, icons: ["📝", "📖"] },
+            { name: "Halbleiter-Schaltungstechnik", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: true, icons: ["📝", "📖"] },
+            { name: "Halbleiter-Schaltungstechnik Praktikum", ects: 1, cat: "Obligatorische Praktikum", y: 2, hs: true, icons: ["📖"] },
+            { name: "Informatik II", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: true, icons: ["📝", "📖"] },
+            { name: "Analysis 3", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: true, icons: ["📝", "📖"] },
+            { name: "Diskrete Mathematik", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: true, icons: ["📝", "📖"] },
+            // === Jahr 2 · SS ===
+            { name: "Elektromagnetische Felder und Wellen", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: false, icons: ["📝", "📖"] },
+            { name: "Signal- und Systemtheorie II", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: false, icons: ["📖"] },
+            { name: "Halbleiterelemente", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: false, icons: ["📝", "📖"] },
+            { name: "Technische Informatik", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: false, icons: ["📖"] },
+            { name: "Numerische Methoden", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: false, icons: ["📝", "📖"] },
+            { name: "Wahrscheinlichkeitstheorie & Statistik", ects: 4, cat: "Obligatorische Fächer", y: 2, hs: false, icons: ["📝", "📖"] },
+            // === Jahr 3 (Jahresmodule) ===
+            { name: "Kernfächer nach Schwerpunkt", ects: 0, cat: "Kernfächer nach Schwerpunkt", y: 3, hs: null, placeholder: true },
+            { name: "Weitere Wahl-Grundlagenfächer", ects: 0, cat: "Weitere Wahl-Grundlagenfächer", y: 3, hs: null, placeholder: true },
+            { name: "Wahl Praktika / Projekte", ects: 0, cat: "Wahl Praktika-Projekte-Seminare", y: 3, hs: null, placeholder: true },
+            { name: "Bachelorarbeit", ects: 12, cat: "Wissenschaftliche Arbeit", y: 3, hs: null },
+            { name: "Science in Perspective", ects: 6, cat: "Wissenschaftliche Arbeit", y: 3, hs: null },
+        ];
+
+        /* ── ZHAW Elektrotechnik ── */
+        const ZHAW = [
+            // === Jahr 1 · HS ===
+            { name: "Physik 1", ects: 4, cat: "mathe-nawi", y: 1, hs: true, icons: ["📖"] },
+            { name: "Werkstoffe der ET", ects: 2, cat: "fach", y: 1, hs: true, icons: ["📖"] },
+            { name: "Elektrizitätslehre 1", ects: 4, cat: "fach", y: 1, hs: true, icons: ["📖"] },
+            { name: "Messtechnik Projekt", ects: 4, cat: "projekt", y: 1, hs: true, icons: ["📖"] },
+            { name: "Digitaltechnik", ects: 2, cat: "fach", y: 1, hs: true, icons: [] },
+            { name: "Informatik 1", ects: 4, cat: "fach", y: 1, hs: true, icons: ["📖"] },
+            { name: "Analysis 1", ects: 4, cat: "mathe-nawi", y: 1, hs: true, icons: ["📖"] },
+            { name: "Lineare Algebra 1", ects: 4, cat: "mathe-nawi", y: 1, hs: true, icons: ["📖"] },
+            { name: "Wirtschaft für Ingenieure", ects: 2, cat: "kontext", y: 1, hs: true, icons: ["📖"] },
+            // === Jahr 1 · SS ===
+            { name: "Physik 2", ects: 4, cat: "mathe-nawi", y: 1, hs: false, icons: [] },
+            { name: "Elektrizitätslehre 2", ects: 4, cat: "fach", y: 1, hs: false, icons: [] },
+            { name: "Digital Communication Networks", ects: 4, cat: "fach", y: 1, hs: false, icons: [] },
+            { name: "Digitaltechnik-Projekt", ects: 4, cat: "projekt", y: 1, hs: false, icons: [] },
+            { name: "Informatik 2", ects: 4, cat: "fach", y: 1, hs: false, icons: [] },
+            { name: "Analysis 2", ects: 4, cat: "mathe-nawi", y: 1, hs: false, icons: [] },
+            { name: "Lineare Algebra 2", ects: 4, cat: "mathe-nawi", y: 1, hs: false, icons: [] },
+            { name: "Communication Competence Basic", ects: 2, cat: "kontext", y: 1, hs: false, icons: [] },
+            // === Jahr 2 · HS ===
+            { name: "Energie- und Antriebstechnik", ects: 4, cat: "fach", y: 2, hs: true, icons: [] },
+            { name: "Signale und Systeme 1", ects: 4, cat: "fach", y: 2, hs: true, icons: [] },
+            { name: "Elektronik 1", ects: 4, cat: "fach", y: 2, hs: true, icons: [] },
+            { name: "Electronics Project", ects: 4, cat: "projekt", y: 2, hs: true, icons: [] },
+            { name: "Computertechnik 1", ects: 4, cat: "fach", y: 2, hs: true, icons: [] },
+            { name: "Analysis 3", ects: 4, cat: "mathe-nawi", y: 2, hs: true, icons: [] },
+            { name: "Stochastik und Statistik", ects: 4, cat: "mathe-nawi", y: 2, hs: true, icons: [] },
+            { name: "WPM Kommunikation", ects: 2, cat: "wahlpflicht", y: 2, hs: true, icons: [], placeholder: true },
+            // === Jahr 2 · SS ===
+            { name: "Physik 3: Felder und Wellen", ects: 4, cat: "mathe-nawi", y: 2, hs: false, icons: [] },
+            { name: "Grundl. der Regelungstechnik", ects: 4, cat: "fach", y: 2, hs: false, icons: [] },
+            { name: "Digitale Signalverarbeitung", ects: 4, cat: "fach", y: 2, hs: false, icons: [] },
+            { name: "Elektronik 2", ects: 4, cat: "fach", y: 2, hs: false, icons: [] },
+            { name: "Electronics Project 2", ects: 4, cat: "projekt", y: 2, hs: false, icons: [] },
+            { name: "Computertechnik 2", ects: 4, cat: "fach", y: 2, hs: false, icons: [] },
+            { name: "Numerik", ects: 4, cat: "mathe-nawi", y: 2, hs: false, icons: [] },
+            { name: "WPM Kommunikation", ects: 2, cat: "wahlpflicht", y: 2, hs: false, icons: [], placeholder: true },
+            // === Jahr 3 · HS ===
+            { name: "Wahlpflichtmodule", ects: 26, cat: "wahlpflicht", y: 3, hs: true, icons: [], placeholder: true },
+            { name: "Projektarbeit Elektrotechnik", ects: 6, cat: "projekt", y: 3, hs: true, icons: [] },
+            // === Jahr 3 · SS ===
+            { name: "Wahlpflichtmodule", ects: 14, cat: "wahlpflicht", y: 3, hs: false, icons: [], placeholder: true },
+            { name: "Bachelorarbeit", ects: 12, cat: "projekt", y: 3, hs: false, icons: [] },
+        ];
+
+        /* ── FHNW EIT (Embedded Systems Design) ── */
+        const FHNW = [
+            // === Jahr 1 · HS ===
+            { name: "Projekt 1", ects: 6, cat: "Projekte und Labor", y: 1, hs: true, icons: ["📖"] },
+            { name: "Grundlagenlabor 1", ects: 3, cat: "Projekte und Labor", y: 1, hs: true, icons: ["📖"] },
+            { name: "Allgemeine Elektrotechnik 1", ects: 3, cat: "Electrical Engineering", y: 1, hs: true, icons: ["📝", "📖"] },
+            { name: "Konvergenz Elektrotechnik", ects: 3, cat: "Electrical Engineering", y: 1, hs: true, icons: ["📖"] },
+            { name: "OOP 1", ects: 3, cat: "Informatik", y: 1, hs: true, icons: ["📝", "📖"] },
+            { name: "Analysis 1", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 1, hs: true, icons: ["📝", "📖"] },
+            { name: "Lineare Algebra 1", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 1, hs: true, icons: ["📝", "📖"] },
+            { name: "Kommunikation", ects: 3, cat: "Kommunikation", y: 1, hs: true, icons: [] },
+            { name: "Englisch", ects: 3, cat: "Kommunikation", y: 1, hs: true, icons: [] },
+            // === Jahr 1 · SS ===
+            { name: "Projekt 2", ects: 6, cat: "Projekte und Labor", y: 1, hs: false, icons: ["📖"] },
+            { name: "Grundlagenlabor 2", ects: 3, cat: "Projekte und Labor", y: 1, hs: false, icons: ["📖"] },
+            { name: "Mechanik", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 1, hs: false, icons: ["📝", "📖"] },
+            { name: "Allgemeine Elektrotechnik 2", ects: 3, cat: "Electrical Engineering", y: 1, hs: false, icons: ["📝", "📖"] },
+            { name: "Digitaltechnik 1", ects: 3, cat: "Electrical Engineering", y: 1, hs: false, icons: ["📝", "📖"] },
+            { name: "OOP 2", ects: 3, cat: "Informatik", y: 1, hs: false, icons: ["📝", "📖"] },
+            { name: "Analysis 2", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 1, hs: false, icons: ["📝", "📖"] },
+            { name: "Kommunikation", ects: 3, cat: "Kommunikation", y: 1, hs: false, icons: [] },
+            { name: "Englisch", ects: 3, cat: "Kommunikation", y: 1, hs: false, icons: [] },
+            // === Jahr 2 · HS ===
+            { name: "Projekt 3", ects: 6, cat: "Projekte und Labor", y: 2, hs: true, icons: ["📖"] },
+            { name: "Grundlagenlabor 3", ects: 3, cat: "Projekte und Labor", y: 2, hs: true, icons: ["📖"] },
+            { name: "Elektromagnetismus", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 2, hs: true, icons: [] },
+            { name: "Modellieren dynam. Systeme", ects: 3, cat: "Electrical Engineering", y: 2, hs: true, icons: [] },
+            { name: "Signalverarbeitung", ects: 3, cat: "Electrical Engineering", y: 2, hs: true, icons: [] },
+            { name: "Kommunikationstechnik Grundl.", ects: 3, cat: "Electrical Engineering", y: 2, hs: true, icons: [] },
+            { name: "Analogtechnik", ects: 3, cat: "Electrical Engineering", y: 2, hs: true, icons: [] },
+            { name: "Mikrocontroller – Grundlagen", ects: 3, cat: "Informatik", y: 2, hs: true, icons: [] },
+            { name: "Analysis 3", ects: 3, cat: "Mathematik und Naturwissenschaften", y: 2, hs: true, icons: [] },
+            // === Jahr 2 · SS ===
+            { name: "Projekt 4", ects: 6, cat: "Projekte und Labor", y: 2, hs: false, icons: ["📖"] },
+            { name: "Grundlagenlabor 4", ects: 3, cat: "Projekte und Labor", y: 2, hs: false, icons: ["📖"] },
+            { name: "Digit. Signalverarbeitung Grdl.", ects: 3, cat: "Electrical Engineering", y: 2, hs: false, icons: [] },
+            { name: "Digitaltechnik 2", ects: 3, cat: "Electrical Engineering", y: 2, hs: false, icons: [] },
+            { name: "Analoge Schaltungstechnik Grdl.", ects: 3, cat: "Electrical Engineering", y: 2, hs: false, icons: [] },
+            { name: "Betriebswirtschaftslehre", ects: 3, cat: "Geistes- und Sozialwissenschaft", y: 2, hs: false, icons: [] },
+            { name: "Geistes- und Sozialwiss.", ects: 3, cat: "Geistes- und Sozialwissenschaft", y: 2, hs: false, icons: [] },
+            { name: "Englisch", ects: 3, cat: "Kommunikation", y: 2, hs: false, icons: [] },
+            // === Jahr 3 · HS ===
+            { name: "Projekt 5", ects: 6, cat: "Projekte und Labor", y: 3, hs: true, icons: ["📖"] },
+            { name: "Labor ESD 1", ects: 3, cat: "Projekte und Labor", y: 3, hs: true, icons: ["📖"] },
+            { name: "Kommunikationstechnik", ects: 3, cat: "Fachvertiefung", y: 3, hs: true, icons: [] },
+            { name: "Digitale Schaltungstechnik", ects: 3, cat: "Fachvertiefung", y: 3, hs: true, icons: [] },
+            { name: "Digit. Signalverarbeitung", ects: 3, cat: "Fachvertiefung", y: 3, hs: true, icons: [] },
+            { name: "Microcontroller Sys. Prog.", ects: 3, cat: "Fachvertiefung", y: 3, hs: true, icons: [] },
+            { name: "Datennetze", ects: 3, cat: "Informatik", y: 3, hs: true, icons: [] },
+            { name: "Workshop Linux & Web", ects: 3, cat: "Informatik", y: 3, hs: true, icons: [] },
+            { name: "Englisch", ects: 3, cat: "Kommunikation", y: 3, hs: true, icons: [] },
+            // === Jahr 3 · SS ===
+            { name: "Projekt 6", ects: 12, cat: "Projekte und Labor", y: 3, hs: false, icons: ["📖"] },
+            { name: "Labor ESD 2", ects: 3, cat: "Projekte und Labor", y: 3, hs: false, icons: ["📖"] },
+            { name: "Digital Communication", ects: 3, cat: "Fachvertiefung", y: 3, hs: false, icons: [] },
+            { name: "Embedded Sys. Software Design", ects: 3, cat: "Fachvertiefung", y: 3, hs: false, icons: [] },
+            { name: "Analog Circuits for Emb. Sys.", ects: 3, cat: "Fachvertiefung", y: 3, hs: false, icons: [] },
+            { name: "Geistes- und Sozialwiss. (×2)", ects: 6, cat: "Geistes- und Sozialwissenschaft", y: 3, hs: false, icons: [] },
+            { name: "Betriebswirtschaftslehre", ects: 3, cat: "Geistes- und Sozialwissenschaft", y: 3, hs: false, icons: [] },
+        ];
+
+        /* ================================================================
+           RENDER HELPERS
+        ================================================================ */
+        function getColor(cat, colorMap) {
+            return colorMap[cat] || "#888888";
+        }
+
+        function renderModule(m, colorMap) {
+            const bg = getColor(m.cat, colorMap);
+            const cls = m.placeholder ? " placeholder" : "";
+            const iconsHtml = (m.icons && m.icons.length)
+                ? `<div class="indicators-container">${m.icons.map(i => `<span class="indicator">${i}</span>`).join("")}</div>`
+                : "";
+            return `
+      <div class="modul${cls}" style="background:${bg}">
+        ${iconsHtml}
+        <div class="modul-titel">${m.name}</div>
+        <div class="modul-kp">${m.ects > 0 ? m.ects + " KP" : "Wahl"}</div>
+      </div>`;
+        }
+
+        function renderUniRow(label, cssClass, modules, colorMap) {
+            if (!modules.length) return "";
+            const modulesHtml = modules.map(m => renderModule(m, colorMap)).join("");
+            return `
+    <div class="uni-row">
+      <div class="uni-label ${cssClass}">${label}</div>
+      <div class="uni-modules">${modulesHtml}</div>
+    </div>`;
+        }
+
+        function renderSemester(semTitle, ethMods, zhawMods, fhnwMods) {
+            return `
+  <div class="vergleich-semester">
+    <div class="vergleich-semester-titel">${semTitle}</div>
+    ${renderUniRow("ETH Zürich<br>ITET", "eth", ethMods, ETH_COLORS)}
+    ${renderUniRow("ZHAW<br>Elektrotechnik", "zhaw", zhawMods, ZHAW_COLORS)}
+    ${renderUniRow("FHNW<br>EIT", "fhnw", fhnwMods, FHNW_COLORS)}
+  </div>`;
+        }
+
+        /* ================================================================
+           RENDER MAIN
+        ================================================================ */
+        function filter(arr, y, hs) {
+            return arr.filter(m => m.y === y && (hs === null ? m.hs === null : m.hs === hs));
+        }
+
+        const root = document.getElementById("vergleich-root");
+
+        for (let yr = 1; yr <= 2; yr++) {
+            let yearHtml = `<div class="vergleich-jahr"><div class="vergleich-jahr-titel">${yr}. Jahr</div>`;
+
+            yearHtml += renderSemester(
+                "Herbstsemester",
+                filter(ETH, yr, true), filter(ZHAW, yr, true), filter(FHNW, yr, true)
+            );
+            yearHtml += renderSemester(
+                "Sommersemester",
+                filter(ETH, yr, false), filter(ZHAW, yr, false), filter(FHNW, yr, false)
+            );
+
+            yearHtml += `</div>`;
+            root.innerHTML += yearHtml;
+        }
+    </script>
+</body>
+
+</html>
