@@ -5,15 +5,6 @@ window.StudiengangModules = [
   // #region 1. Semester (30 ECTS, 30 Wochenlektionen)
   {
     // PFLICHTFELDER
-    name: "Wirtschaft für Ingenieure",
-    ects: 2,
-    standardcategory: "kontext",
-    // KONTEXT
-    year: 1,
-    semester: 1,
-  },
-  {
-    // PFLICHTFELDER
     name: "Software-Projekt 1",
     ects: 4,
     standardcategory: "projekt",
@@ -50,6 +41,15 @@ window.StudiengangModules = [
   },
   {
     // PFLICHTFELDER
+    name: "Grundlagen der Elektrotechnik und Digitaltechnik",
+    ects: 3,
+    standardcategory: "mathe-nawi",
+    // KONTEXT
+    year: 1,
+    semester: 1,
+  },
+  {
+    // PFLICHTFELDER
     name: "Analysis 1",
     ects: 4,
     standardcategory: "mathe-nawi",
@@ -68,9 +68,9 @@ window.StudiengangModules = [
   },
   {
     // PFLICHTFELDER
-    name: "Grundlagen der Elektrotechnik und Digitaltechnik",
-    ects: 3,
-    standardcategory: "mathe-nawi",
+    name: "Wirtschaft für Ingenieure",
+    ects: 2,
+    standardcategory: "kontext",
     // KONTEXT
     year: 1,
     semester: 1,
@@ -79,15 +79,6 @@ window.StudiengangModules = [
   // #endregion 1. Semester (30 ECTS, 30 Wochenlektionen)
 
   // #region 2. Semester (30 ECTS, 30 Wochenlektionen)
-  {
-    // PFLICHTFELDER
-    name: "Communication Competence Basic",
-    ects: 2,
-    standardcategory: "kontext",
-    // KONTEXT
-    year: 1,
-    semester: 2,
-  },
   {
     // PFLICHTFELDER
     name: "Software-Projekt 2",
@@ -151,19 +142,19 @@ window.StudiengangModules = [
     year: 1,
     semester: 2,
   },
+  {
+    // PFLICHTFELDER
+    name: "Communication Competence Basic",
+    ects: 2,
+    standardcategory: "kontext",
+    // KONTEXT
+    year: 1,
+    semester: 2,
+  },
 
   // #endregion 2. Semester (30 ECTS, 30 Wochenlektionen)
 
   // #region 3. Semester (30 ECTS, 30 Wochenlektionen)
-  {
-    // PFLICHTFELDER
-    name: "Wahlpflichtmodul Kommunikation",
-    ects: 2,
-    standardcategory: "kontext",
-    // KONTEXT
-    year: 2,
-    semester: 3,
-  },
   {
     // PFLICHTFELDER
     name: "Software-Projekt 3",
@@ -227,10 +218,6 @@ window.StudiengangModules = [
     year: 2,
     semester: 3,
   },
-
-  // #endregion 3. Semester (30 ECTS, 30 Wochenlektionen)
-
-  // #region 4. Semester (30 ECTS, 30 Wochenlektionen)
   {
     // PFLICHTFELDER
     name: "Wahlpflichtmodul Kommunikation",
@@ -238,8 +225,12 @@ window.StudiengangModules = [
     standardcategory: "kontext",
     // KONTEXT
     year: 2,
-    semester: 4,
+    semester: 3,
   },
+
+  // #endregion 3. Semester (30 ECTS, 30 Wochenlektionen)
+
+  // #region 4. Semester (30 ECTS, 30 Wochenlektionen)
   {
     // PFLICHTFELDER
     name: "Software-Projekt 4",
@@ -296,6 +287,15 @@ window.StudiengangModules = [
   },
   {
     // PFLICHTFELDER
+    name: "Physik Engines",
+    ects: 2,
+    standardcategory: "mathe-nawi",
+    // KONTEXT
+    year: 2,
+    semester: 4,
+  },
+  {
+    // PFLICHTFELDER
     name: "Höhere Mathematik für Informatiker 2",
     ects: 2,
     standardcategory: "mathe-nawi",
@@ -305,9 +305,9 @@ window.StudiengangModules = [
   },
   {
     // PFLICHTFELDER
-    name: "Physik Engines",
+    name: "Wahlpflichtmodul Kommunikation",
     ects: 2,
-    standardcategory: "mathe-nawi",
+    standardcategory: "kontext",
     // KONTEXT
     year: 2,
     semester: 4,
@@ -382,7 +382,7 @@ window.StudiengangModules = [
     year: 3,
     semester: 5,
   },
-    {
+  {
     // PFLICHTFELDER
     name: "Wahlpflichtmodul Kontext",
     ects: 2,
@@ -391,7 +391,7 @@ window.StudiengangModules = [
     year: 3,
     semester: 5,
   },
-    {
+  {
     // PFLICHTFELDER
     name: "Wahlpflichtmodul Kontext",
     ects: 2,
