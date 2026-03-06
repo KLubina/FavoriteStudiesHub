@@ -42,11 +42,11 @@ window.StudiengangModuleDetails = {
     pruefungen: [
       {
         label: "HS20 Prüfung (analysiert)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Lineare-Algebra/Lineare-Algebra-HS20-Exam-Analyzed.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/1.Sem/Lineare-Algebra/Lineare-Algebra-HS20-Exam-Analyzed.pdf",
       },
       {
         label: "Zusammenfassung (Lukas Cavigelli)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Lineare-Algebra/Zusammenfassung%20Lineare%20Algebra%20ITET%20Lukas%20Cavigelli.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/1.Sem/Lineare-Algebra/Zusammenfassung%20Lineare%20Algebra%20ITET%20Lukas%20Cavigelli.pdf",
       },
     ],
   },
@@ -73,11 +73,11 @@ window.StudiengangModuleDetails = {
     pruefungen: [
       {
         label: "FS23 Prüfung (analysiert)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Analysis-I/Analysis-I-FS23-Exam-Analyzed.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/1.Sem/Analysis-I/Analysis-I-FS23-Exam-Analyzed.pdf",
       },
       {
         label: "Zusammenfassung (Jeremias Baur)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Analysis-I/Analysis_1_ZSF_JeremiasBaur.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/1.Sem/Analysis-I/Analysis_1_ZSF_JeremiasBaur.pdf",
       },
     ],
   },
@@ -149,7 +149,7 @@ window.StudiengangModuleDetails = {
     pruefungen: [
       {
         label: "FS20 Prüfung (analysiert)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Netzwerk-Schaltungen-I/NuS1-FS20-Exam-Analyzed.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/1.Sem/Netzwerk-Schaltungen-I/NuS1-FS20-Exam-Analyzed.pdf",
       },
     ],
   },
@@ -181,11 +181,11 @@ window.StudiengangModuleDetails = {
     pruefungen: [
       {
         label: "FS22 Prüfung (analysiert)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Technische-Mechanik/TechMech-FS22-Exam-Analyzed.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/1.Sem/Technische-Mechanik/TechMech-FS22-Exam-Analyzed.pdf",
       },
       {
         label: "Zusammenfassung (Lina DeWindt)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Technische-Mechanik/TechMech%20ZSF%20Lina%20DeWindt.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/1.Sem/Technische-Mechanik/TechMech%20ZSF%20Lina%20DeWindt.pdf",
       },
     ],
   },
@@ -229,11 +229,11 @@ window.StudiengangModuleDetails = {
     pruefungen: [
       {
         label: "FS24 Prüfung (analysiert)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Analysis-II/Analysis-II-FS24-Exam-Analyzed.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/2.Sem/Analysis-II/Analysis-II-FS24-Exam-Analyzed.pdf",
       },
       {
         label: "Zusammenfassung (Ananya)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Analysis-II/Analysis_ZF_Ananya_V5.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/2.Sem/Analysis-II/Analysis_ZF_Ananya_V5.pdf",
       },
     ],
   },
@@ -310,7 +310,7 @@ window.StudiengangModuleDetails = {
     pruefungen: [
       {
         label: "HS21 Prüfung (analysiert)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Physik-I/Physik-I-HS21-Exam-Analyzed.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/2.Sem/Physik-I/Physik-I-HS21-Exam-Analyzed.pdf",
       },
     ],
   },
@@ -339,11 +339,11 @@ window.StudiengangModuleDetails = {
     pruefungen: [
       {
         label: "FS18 Prüfung (analysiert)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Informatik-I/Inf-I-FS18-Exam-Analyzed.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/2.Sem/Informatik-I/Inf-I-FS18-Exam-Analyzed.pdf",
       },
       {
         label: "Zusammenfassung (Lukas Cavigelli)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Informatik-I/Zusammenfassung%20Informatik%20ITET%20Lukas%20Cavigelli.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/2.Sem/Informatik-I/Zusammenfassung%20Informatik%20ITET%20Lukas%20Cavigelli.pdf",
       },
     ],
   },
@@ -368,11 +368,11 @@ window.StudiengangModuleDetails = {
     pruefungen: [
       {
         label: "FS23 Prüfung (analysiert)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Mathematische-Methoden/Mathematische-Methoden-FS23-Exam%2BAnalyzed.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/2.Sem/Mathematische-Methoden/Mathematische-Methoden-FS23-Exam%2BAnalyzed.pdf",
       },
       {
         label: "Zusammenfassung Komplexe Analysis (Lukas Cavigelli)",
-        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Mathematische-Methoden/Zusammenfassung%20Komplexe%20Analysis%20ITET%20Lukas%20Cavigelli.pdf",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/2.Sem/Mathematische-Methoden/Zusammenfassung%20Komplexe%20Analysis%20ITET%20Lukas%20Cavigelli.pdf",
       },
     ],
   },
@@ -411,7 +411,7 @@ window.StudiengangModuleDetails = {
     vorlesungslink:
       "https://video.ethz.ch/lectures/d-math/2015/autumn/401-0363-10L/a36b37a3-3ac0-4e47-8310-b79347db3717.html",
     pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/3.Sem/Analysis-III",
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/ITET-old-exams/3.Sem/Analysis-III",
   },
   "Physik II": {
     kurzbeschreibung:
@@ -458,7 +458,7 @@ window.StudiengangModuleDetails = {
     link: "https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2025W&ansicht=KATALOGDATEN&lerneinheitId=193407&lang=de",
     kurslink: "https://www.mins.ee.ethz.ch/teaching/signal/klausuren.html",
     pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/3.Sem/Signal-System-I",
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/ITET-old-exams/3.Sem/Signal-System-I",
   },
   "Diskrete Mathematik": {
     kurzbeschreibung:
@@ -486,7 +486,7 @@ window.StudiengangModuleDetails = {
     kurslink:
       "https://cadmo.ethz.ch/education/lectures/HS15/DiskreteMathematik.html\nhttps://crypto.ethz.ch/teaching/DM23/",
     pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/3.Sem/Diskrete-Mathematik",
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/ITET-old-exams/3.Sem/Diskrete-Mathematik",
   },
   "Halbleiter-Schaltungstechnik": {
     kurzbeschreibung:
@@ -637,7 +637,7 @@ window.StudiengangModuleDetails = {
       "• Tests",
     link: "https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2025S&ansicht=KATALOGDATEN&lerneinheitId=187991&lang=de",
     pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/4.Sem/Wahrscheinlichkeitstheorie-und-Statistik",
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/ITET-old-exams/4.Sem/Wahrscheinlichkeitstheorie-und-Statistik",
   },
   "Elektromagnetische Felder und Wellen": {
     kurzbeschreibung:
@@ -655,7 +655,7 @@ window.StudiengangModuleDetails = {
     link: "https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2025S&ansicht=KATALOGDATEN&lerneinheitId=188239&lang=de",
     kurslink: "https://www.n.ethz.ch/~zrene/EM/",
     pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/4.Sem/Elektromagnetische-Felder-und-Wellen",
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/ITET-old-exams/4.Sem/Elektromagnetische-Felder-und-Wellen",
   },
   Halbleiterelemente: {
     kurzbeschreibung:
@@ -677,7 +677,7 @@ window.StudiengangModuleDetails = {
       "• Bipolar transistor: Operation principles, modes of operation, characteristics, models, simulation",
     link: "https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2025S&ansicht=KATALOGDATEN&lerneinheitId=187791&lang=de",
     pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/4.Sem/Halbleiterelemente",
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/ITET-old-exams/4.Sem/Halbleiterelemente",
   },
   "Numerische Methoden": {
     kurzbeschreibung:
@@ -695,7 +695,7 @@ window.StudiengangModuleDetails = {
     vorlesungslink:
       "https://video.ethz.ch/lectures/d-math/2016/autumn/401-0663-00L/1e9ea34b-4fc6-4dab-8e3b-dd21bfb732df.html",
     pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/4.Sem/Numerische-Methoden",
+      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/ITET-old-exams/4.Sem/Numerische-Methoden",
   },
   // #endregion 4 Semester
 
