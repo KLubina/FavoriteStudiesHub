@@ -566,7 +566,13 @@
                     html += "<h4>Ressourcen</h4>";
                     if (details.vorlesungslink) html += `<p><a href="${details.vorlesungslink}" target="_blank">🎥 Vorlesungsvideos</a></p>`;
                     if (details.skript) html += `<p><a href="${details.skript}" target="_blank">📄 Skript</a></p>`;
-                    if (details.pruefungen) html += `<p><a href="${details.pruefungen}" target="_blank">📝 Alte Prüfungen</a></p>`;
+                    if (details.pruefungen) {
+                        if (Array.isArray(details.pruefungen)) {
+                            details.pruefungen.forEach(p => { html += `<p><a href="${p.url}" target="_blank">📝 ${p.label}</a></p>`; });
+                        } else {
+                            html += `<p><a href="${details.pruefungen}" target="_blank">📝 Alte Prüfungen</a></p>`;
+                        }
+                    }
                     if (details.link) {
                         const links = Array.isArray(details.link) ? details.link : [details.link];
                         links.forEach(l => { html += `<p><a href="${l}" target="_blank">📖 VVZ / Modulseite</a></p>`; });

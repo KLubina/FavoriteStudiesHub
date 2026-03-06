@@ -7,31 +7,88 @@ window.StudiengangModuleDetails = {
   "Projekt 1": {
     link: "https://www.fhnw.ch/de/studium/module/9169675",
   },
+  "OOP 1": {
+    link: "https://www.fhnw.ch/de/studium/module/6007993",
+    pruefungen: [
+      {
+        label: "HS18 Test 1 (mit Lösung)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/OOP%201/OOP_1_HS18_1_Test_mit_L%C3%B6sungen.pdf",
+      },
+      {
+        label: "HS18 Test 2 (mit Lösung)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/OOP%201/OOP_1_HS18_2_Test_mit_L%C3%B6sungen.pdf",
+      },
+      {
+        label: "HS18 Test 3 (mit Lösung)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/OOP%201/OOP_1_HS18_3_Test_mit_L%C3%B6sungen.pdf",
+      },
+    ],
+  },
   "Objektorientierte Programmierung 1": {
     link: "https://www.fhnw.ch/de/studium/module/6007993",
-    pruefungen:
-      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/1.Sem/OOP%201",
+    pruefungen: [
+      {
+        label: "HS18 Test 1 (mit Lösung)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/OOP%201/OOP_1_HS18_1_Test_mit_L%C3%B6sungen.pdf",
+      },
+      {
+        label: "HS18 Test 2 (mit Lösung)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/OOP%201/OOP_1_HS18_2_Test_mit_L%C3%B6sungen.pdf",
+      },
+      {
+        label: "HS18 Test 3 (mit Lösung)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/OOP%201/OOP_1_HS18_3_Test_mit_L%C3%B6sungen.pdf",
+      },
+    ],
   },
   "Wärme und Strahlung": {
     link: "https://www.fhnw.ch/de/studium/module/9063957",
   },
   "Allgemeine Elektrotechnik 1": {
     link: "https://www.fhnw.ch/de/studium/module/6007771",
-    pruefungen:
-      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/1.Sem/Allgemeine%20Elektrotechnik%201",
+    pruefungen: [
+      {
+        label: "HS22 Test 1",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/Allgemeine%20Elektrotechnik%201/Allgemeine_Elektrotechnik_HS22_1_Test.pdf",
+      },
+      {
+        label: "HS22 Test 2",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/Allgemeine%20Elektrotechnik%201/Allgemeine_Elektrotechnik_HS22_2_Test.pdf",
+      },
+      {
+        label: "HS22 Test 3",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/Allgemeine%20Elektrotechnik%201/Allgemeine_Elektrotechnik_HS22_3_Test.pdf",
+      },
+    ],
   },
   "Konvergenz Elektrotechnik": {
     link: "https://www.fhnw.ch/de/studium/module/9041293",
   },
   "Analysis 1": {
     link: "https://www.fhnw.ch/de/studium/module/6008327",
-    pruefungen:
-      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/1.Sem/Analysis%201",
+    pruefungen: [
+      {
+        label: "HS22 Test 1",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/Analysis%201/Analysis_1_HS22_1_Test.pdf",
+      },
+      {
+        label: "HS22 Test 2",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/Analysis%201/Analysis_1_HS22_2_Test.pdf",
+      },
+    ],
   },
   "Lineare Algebra 1": {
     link: "https://www.fhnw.ch/de/studium/module/6008325",
-    pruefungen:
-      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/1.Sem/Lineare%20Algebra",
+    pruefungen: [
+      {
+        label: "HS22 Test 1 (mit Lösung)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/Lineare%20Algebra/Lineare_Algebra_HS22_1_Test_mit_L%C3%B6sungen.pdf",
+      },
+      {
+        label: "HS22 Test 2 (mit Lösung)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/1.Sem/Lineare%20Algebra/Lineare_Algebra_HS22_2_Test_mit_L%C3%B6sungen.pdf",
+      },
+    ],
   },
   "Grundlagenlabor 1": {
     link: "https://www.fhnw.ch/de/studium/module/6010242",
@@ -44,13 +101,37 @@ window.StudiengangModuleDetails = {
   },
   "Analysis 2": {
     link: "https://www.fhnw.ch/de/studium/module/6008332",
-    pruefungen:
-      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/2.Sem/Analysis%202",
+    pruefungen: [
+      {
+        label: "FS23 Test 1",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/Analysis%202/Analysis_2_FS23_1_Test.pdf",
+      },
+      {
+        label: "FS23 Test 2",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/Analysis%202/Analysis_2_FS23_2_Test.pdf",
+      },
+    ],
   },
   Mechanik: {
     link: "https://www.fhnw.ch/de/studium/module/9090504",
-    pruefungen:
-      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/2.Sem/Mechanik",
+    pruefungen: [
+      {
+        label: "FS23 Prüfung 1 (mit Lösung)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/Mechanik/Mechanik_FS23_1_Pr%C3%BCfung_mit_L%C3%B6sungen.pdf",
+      },
+      {
+        label: "FS23 Prüfung 2 (mit Lösung)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/Mechanik/Mechanik_FS23_2_Pr%C3%BCfung_mit_L%C3%B6sungen.pdf",
+      },
+      {
+        label: "FS23 Prüfung 3 (mit Lösung)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/Mechanik/Mechanik_FS23_3_Pr%C3%BCfung_mit_L%C3%B6sungen.pdf",
+      },
+      {
+        label: "Muster Semesterprüfungen",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/Mechanik/Muster_Semesterpr%C3%BCfungen.pdf",
+      },
+    ],
   },
   "Projekt 2": {
     link: "https://www.fhnw.ch/de/studium/module/9155733",
@@ -60,18 +141,71 @@ window.StudiengangModuleDetails = {
   },
   "Allgemeine Elektrotechnik 2": {
     link: "https://www.fhnw.ch/de/studium/module/6007772",
-    pruefungen:
-      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/2.Sem/Allgemeine%20Elektrotechnik%202",
+    pruefungen: [
+      {
+        label: "FS22 Test 1",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/Allgemeine%20Elektrotechnik%202/Allgemeine_Elektrotechnik_2_FS22_1_Test.pdf",
+      },
+      {
+        label: "FS22 Test 2",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/Allgemeine%20Elektrotechnik%202/Allgemeine_Elektrotechnik_2_FS22_2_Test.pdf",
+      },
+      {
+        label: "Modulabschlussprüfung 2017",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/Allgemeine%20Elektrotechnik%202/Modulabschlusspr%C3%BCfung-2017_AET2.pdf",
+      },
+    ],
   },
   "Digitaltechnik 1": {
     link: "https://www.fhnw.ch/de/studium/module/6007847",
-    pruefungen:
-      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/2.Sem/Digitaltechnik%201",
+    pruefungen: [
+      {
+        label: "HS21 Prüfung 1",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/Digitaltechnik%201/Digitaltechnik_1_HS21_1_Pr%C3%BCfung.pdf",
+      },
+    ],
+  },
+  "OOP 2": {
+    link: "https://www.fhnw.ch/de/studium/module/6007994",
+    pruefungen: [
+      {
+        label: "FS19 Prüfung 1",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/OOP%202/oop2_1_Pr%C3%BCfung_fs19.pdf",
+      },
+      {
+        label: "FS19 Prüfung 2",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/OOP%202/oop2_2_Pr%C3%BCfung_fs19.pdf",
+      },
+      {
+        label: "FS19 Prüfung 3",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/OOP%202/oop2_3_Pr%C3%BCfung_fs19.pdf",
+      },
+      {
+        label: "FS19 Prüfung 4",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/OOP%202/oop2_4_Pr%C3%BCfung_fs19.pdf",
+      },
+    ],
   },
   "Objektorientierte Programmierung 2": {
     link: "https://www.fhnw.ch/de/studium/module/6007994",
-    pruefungen:
-      "https://github.com/KLubina/FavoriteStudiesHub/tree/main/old-exams/EIT-FHNW-old-exams/2.Sem/OOP%202",
+    pruefungen: [
+      {
+        label: "FS19 Prüfung 1",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/OOP%202/oop2_1_Pr%C3%BCfung_fs19.pdf",
+      },
+      {
+        label: "FS19 Prüfung 2",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/OOP%202/oop2_2_Pr%C3%BCfung_fs19.pdf",
+      },
+      {
+        label: "FS19 Prüfung 3",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/OOP%202/oop2_3_Pr%C3%BCfung_fs19.pdf",
+      },
+      {
+        label: "FS19 Prüfung 4",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/EIT-FHNW-old-exams/2.Sem/OOP%202/oop2_4_Pr%C3%BCfung_fs19.pdf",
+      },
+    ],
   },
   // #endregion
 

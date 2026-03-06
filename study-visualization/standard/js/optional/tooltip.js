@@ -161,7 +161,13 @@ window.StudienplanTooltip = {
           detailsHTML += `<p><a href="${details.skript}" target="_blank">📄 Skript</a></p>`;
         }
         if (details.pruefungen) {
-          detailsHTML += `<p><a href="${details.pruefungen}" target="_blank">📝 Alte Prüfungen</a></p>`;
+          if (Array.isArray(details.pruefungen)) {
+            details.pruefungen.forEach((p) => {
+              detailsHTML += `<p><a href="${p.url}" target="_blank">📝 ${p.label}</a></p>`;
+            });
+          } else {
+            detailsHTML += `<p><a href="${details.pruefungen}" target="_blank">📝 Alte Prüfungen</a></p>`;
+          }
         }
         if (details.link) {
           if (Array.isArray(details.link)) {
