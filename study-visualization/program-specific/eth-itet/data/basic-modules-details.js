@@ -39,8 +39,16 @@ window.StudiengangModuleDetails = {
       "https://metaphor.ethz.ch/x/2019/hs/401-0151-00L/\nhttps://n.ethz.ch/~michbaum/linalg/",
     vorlesungslink:
       "https://video.ethz.ch/lectures/d-math/2015/autumn/401-1151-00L/1707a212-2905-448f-b042-6eca940f6c93.html",
-    pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/1.Sem/Lineare-Algebra",
+    pruefungen: [
+      {
+        label: "HS20 Prüfung (analysiert)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Lineare-Algebra/Lineare-Algebra-HS20-Exam-Analyzed.pdf",
+      },
+      {
+        label: "Zusammenfassung (Lukas Cavigelli)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Lineare-Algebra/Zusammenfassung%20Lineare%20Algebra%20ITET%20Lukas%20Cavigelli.pdf",
+      },
+    ],
   },
   "Analysis 1": {
     kurzbeschreibung: "Einführung in die Grundlagen der Analysis",
@@ -62,8 +70,16 @@ window.StudiengangModuleDetails = {
     kurslink: "https://n.ethz.ch/~michbaum/analysis1/",
     vorlesungslink:
       "https://video.ethz.ch/lectures/d-math/2016/autumn/401-1261-07L/a65b10a4-c135-3bca-a4f5-c37d9f8b0913.html",
-    pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/1.Sem/Analysis-I",
+    pruefungen: [
+      {
+        label: "FS23 Prüfung (analysiert)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Analysis-I/Analysis-I-FS23-Exam-Analyzed.pdf",
+      },
+      {
+        label: "Zusammenfassung (Jeremias Baur)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Analysis-I/Analysis_1_ZSF_JeremiasBaur.pdf",
+      },
+    ],
   },
 
   Digitaltechnik: {
@@ -88,6 +104,20 @@ window.StudiengangModuleDetails = {
       "► Mikroprozessoren",
     link: "https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2025W&ansicht=KATALOGDATEN&lerneinheitId=192958&lang=de",
     kurslink: "https://n.ethz.ch/~jloehle/",
+    pruefungen: [
+      {
+        label: "HS18 Aufgabenblatt",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/1.Sem/Digitaltechnik/HS18_Digitaltechnik_Aufgabenblatt.pdf",
+      },
+      {
+        label: "HS18 Aufgabenstellung",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/1.Sem/Digitaltechnik/HS18_Digitaltechnik_Aufgabenstellung.pdf",
+      },
+      {
+        label: "Zusammenfassung (Andrej Scheuer)",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/1.Sem/Digitaltechnik/Digitaltechnik_ZSF_Andrej_Scheuer.pdf",
+      },
+    ],
   },
   "Digitaltechnik Praktikum": {
     kurzbeschreibung:
@@ -116,8 +146,12 @@ window.StudiengangModuleDetails = {
       "► Zeitlich veränderliches elektromagnetisches Feld",
     link: "https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=192802&semkez=2025W&ansicht=LEHRVERANSTALTUNGEN&lang=de",
     kurslink: "https://n.ethz.ch/~rsahleanu/nus1/",
-    pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/1.Sem/Netzwerk-Schaltungen-I",
+    pruefungen: [
+      {
+        label: "FS20 Prüfung (analysiert)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Netzwerk-Schaltungen-I/NuS1-FS20-Exam-Analyzed.pdf",
+      },
+    ],
   },
   "Technische Mechanik": {
     kurzbeschreibung:
@@ -144,8 +178,16 @@ window.StudiengangModuleDetails = {
       "• Drall bei ebenen Bewegungen",
     link: "https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2025W&ansicht=KATALOGDATEN&lerneinheitId=193886&lang=de",
     kurslink: "https://www.n.ethz.ch/~ldewindt/TechMechHS22_PVK/index.html",
-    pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/1.Sem/Technische-Mechanik",
+    pruefungen: [
+      {
+        label: "FS22 Prüfung (analysiert)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Technische-Mechanik/TechMech-FS22-Exam-Analyzed.pdf",
+      },
+      {
+        label: "Zusammenfassung (Lina DeWindt)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/1.Sem/Technische-Mechanik/TechMech%20ZSF%20Lina%20DeWindt.pdf",
+      },
+    ],
   },
   "Vorkurs Informatik": {
     kurzbeschreibung:
@@ -184,8 +226,16 @@ window.StudiengangModuleDetails = {
     kurslink: "https://n.ethz.ch/~michbaum/analysis2/",
     vorlesungslink:
       "https://video.ethz.ch/lectures/d-math/2016/spring/401-1262-07L/e9902307-e2b7-44f3-8feb-115773280c13.html",
-    pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/2.Sem/Analysis-II",
+    pruefungen: [
+      {
+        label: "FS24 Prüfung (analysiert)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Analysis-II/Analysis-II-FS24-Exam-Analyzed.pdf",
+      },
+      {
+        label: "Zusammenfassung (Ananya)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Analysis-II/Analysis_ZF_Ananya_V5.pdf",
+      },
+    ],
   },
   "Netzwerke und Schaltungen II": {
     kurzbeschreibung:
@@ -218,6 +268,12 @@ window.StudiengangModuleDetails = {
       "https://www.n.ethz.ch/~ldewindt/NuS2FS24/index.html\nhttps://n.ethz.ch/~msteinkel/",
     vorlesungslink:
       "https://video.ethz.ch/lectures/d-itet/2023/spring/227-0002-00L",
+    pruefungen: [
+      {
+        label: "FS17 Aufgabenkatalog",
+        url: "https://raw.githubusercontent.com/KLubina/FavoriteStudiesHub/main/old-exams/ITET-old-exams/2.Sem/NuS-2/NuS2_FS17_Aufgabenkatalog.pdf",
+      },
+    ],
   },
   "Netzwerke und Schaltungen Praktikum": {
     kurzbeschreibung:
@@ -251,8 +307,12 @@ window.StudiengangModuleDetails = {
     link: "https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2025S&ansicht=KATALOGDATEN&lerneinheitId=188037&lang=de",
     vorlesungslink:
       "https://video.ethz.ch/lectures/d-phys/2023/autumn/402-0083-00L.html",
-    pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/2.Sem/Physik-I",
+    pruefungen: [
+      {
+        label: "HS21 Prüfung (analysiert)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Physik-I/Physik-I-HS21-Exam-Analyzed.pdf",
+      },
+    ],
   },
   "Informatik I": {
     kurzbeschreibung:
@@ -276,8 +336,16 @@ window.StudiengangModuleDetails = {
     link: "https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2025S&ansicht=KATALOGDATEN&lerneinheitId=187917&lang=de",
     vorlesungslink:
       "https://video.ethz.ch/lectures/d-infk/2016/autumn/252-0847-00L.html",
-    pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/2.Sem/Informatik-I",
+    pruefungen: [
+      {
+        label: "FS18 Prüfung (analysiert)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Informatik-I/Inf-I-FS18-Exam-Analyzed.pdf",
+      },
+      {
+        label: "Zusammenfassung (Lukas Cavigelli)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Informatik-I/Zusammenfassung%20Informatik%20ITET%20Lukas%20Cavigelli.pdf",
+      },
+    ],
   },
   "Mathematische Methoden": {
     kurzbeschreibung:
@@ -297,8 +365,16 @@ window.StudiengangModuleDetails = {
       "• Fourier-Transformationen\n" +
       "• Laplace-Transformationen",
     link: "https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2025S&ansicht=KATALOGDATEN&lerneinheitId=188879&lang=de",
-    pruefungen:
-      "https://github.com/KLubina/StudiumHub/tree/main/old-exams/ITET-old-exams/2.Sem/Mathematische-Methoden",
+    pruefungen: [
+      {
+        label: "FS23 Prüfung (analysiert)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Mathematische-Methoden/Mathematische-Methoden-FS23-Exam%2BAnalyzed.pdf",
+      },
+      {
+        label: "Zusammenfassung Komplexe Analysis (Lukas Cavigelli)",
+        url: "https://raw.githubusercontent.com/KLubina/StudiumHub/main/old-exams/ITET-old-exams/2.Sem/Mathematische-Methoden/Zusammenfassung%20Komplexe%20Analysis%20ITET%20Lukas%20Cavigelli.pdf",
+      },
+    ],
   },
   // #endregion 2 Semester
 
