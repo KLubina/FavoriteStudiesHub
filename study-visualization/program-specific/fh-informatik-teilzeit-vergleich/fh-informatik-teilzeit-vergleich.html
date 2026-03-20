@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatik FH Teilzeit - Vergleich</title>
+
+    <link rel="stylesheet" href="../../standard/css/core/variables.css">
+    <link rel="stylesheet" href="../../standard/css/core/layout.css">
+    <link rel="stylesheet" href="../../standard/css/core/typography.css">
+    <link rel="stylesheet" href="../../standard/css/core/hub-button.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px 30px 60px;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 4px;
+        }
+
+        h2.json-subtitle {
+            font-size: 15px;
+            color: #666;
+            margin: 0 0 30px;
+            font-weight: 400;
+        }
+
+        .vergleich-semester {
+            margin-bottom: 36px;
+        }
+
+        .vergleich-semester-titel {
+            font-size: 16px;
+            font-weight: 700;
+            color: #444;
+            background: #e8e8e8;
+            padding: 6px 14px;
+            border-radius: 6px;
+            margin-bottom: 14px;
+            display: inline-block;
+        }
+
+        .uni-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0;
+            margin-bottom: 10px;
+        }
+
+        .uni-label {
+            width: 170px;
+            min-width: 170px;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 10px 8px 0;
+            color: #fff;
+            border-radius: 6px 0 0 6px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            letter-spacing: 0.02em;
+        }
+
+        .uni-label.zhaw {
+            background: #006b3c;
+        }
+
+        .uni-label.fhnw {
+            background: #c5002f;
+        }
+
+        .uni-label.ost {
+            background: #004b9b;
+        }
+
+        .uni-label.bfh {
+            background: #7d2a8f;
+        }
+
+        .uni-label.hslu {
+            background: #1f6d5a;
+        }
+
+        .uni-label.fhgr {
+            background: #7a3e1d;
+        }
+
+        .uni-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 6px 10px;
+            background: #fff;
+            border-radius: 0 6px 6px 0;
+            border: 1px solid #e0e0e0;
+            border-left: none;
+            flex: 1;
+            min-height: 52px;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        .modul {
+            min-width: 24px;
+            height: 56px;
+            padding: 6px 6px 5px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            position: relative;
+            cursor: default;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+            transition: transform 0.15s, box-shadow 0.15s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .modul:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .modul-titel {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 1.2;
+            margin-bottom: 2px;
+            overflow: hidden;
+            width: 100%;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .modul-kp {
+            font-size: 11px;
+            opacity: 0.9;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 980px) {
+            .uni-row {
+                flex-direction: column;
+            }
+
+            .uni-label {
+                width: 100%;
+                min-width: 0;
+                border-radius: 6px 6px 0 0;
+                padding: 8px;
+            }
+
+            .uni-modules {
+                width: 100%;
+                border-left: 1px solid #e0e0e0;
+                border-top: none;
+                border-radius: 0 0 6px 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hub-button-container">
+        <a href="../../../index.html" class="hub-button">← Zurück zum Hub</a>
+    </div>
+
+    <h1>Informatik FH Teilzeit - Vergleich</h1>
+    <h2 class="json-subtitle">ZHAW · FHNW · OST · BFH · HSLU · FH Graubünden (Daten aus StudiumHub)</h2>
+
+    <div id="vergleich-root"></div>
+
+    <script>
+        const CATEGORY_COLORS = {
+            "fach": "#0284c7",
+            "projekt": "#7c3aed",
+            "mathe": "#dc2626",
+            "mathe-nawi": "#dc2626",
+            "kontext": "#059669",
+            "pflicht": "#0284c7",
+            "kommunikation": "#059669",
+            "special-weeks": "#ea580c",
+            "grundlagen": "#0369a1",
+            "ai": "#6d28d9",
+            "Fachgrundlagen & Fachergänzungen": "#0284c7",
+            "Vertiefungen": "#7c3aed",
+            "Projekte": "#ea580c",
+            "Rahmenausbildung": "#0284c7",
+            "Mathematik und Physik": "#dc2626",
+            "Kommunikation und Englisch": "#059669",
+            "Kernmodule": "#0284c7",
+            "Projektmodule": "#7c3aed",
+        };
+
+        const PROGRAMS = [
+            {
+                label: "ZHAW<br>BSc Informatik (Teilzeit)",
+                cssClass: "zhaw",
+                modules: [
+                    { name: "Wirtschaft für Ingenieure", ects: 2, semester: 1, cat: "kontext" },
+                    { name: "Software-Projekt 1", ects: 4, semester: 1, cat: "projekt" },
+                    { name: "Programmieren 1", ects: 4, semester: 1, cat: "fach" },
+                    { name: "Information & Codierung", ects: 4, semester: 1, cat: "fach" },
+                    { name: "Analysis 1", ects: 4, semester: 1, cat: "mathe-nawi" },
+                    { name: "Diskrete Mathematik", ects: 4, semester: 1, cat: "mathe-nawi" },
+                    { name: "Communication Competition Basic", ects: 2, semester: 2, cat: "kontext" },
+                    { name: "Software-Projekt 2", ects: 4, semester: 2, cat: "projekt" },
+                    { name: "Programmieren 2", ects: 4, semester: 2, cat: "fach" },
+                    { name: "Theoretische Informatik", ects: 4, semester: 2, cat: "fach" },
+                    { name: "Analysis 2", ects: 4, semester: 2, cat: "mathe-nawi" },
+                    { name: "Lineare Algebra", ects: 4, semester: 2, cat: "mathe-nawi" },
+                ]
+            },
+            {
+                label: "FHNW<br>BSc Informatik - Nur Assessment",
+                cssClass: "fhnw",
+                modules: [
+                    { name: "Lineare Algebra", ects: 3, semester: 1, cat: "Fachgrundlagen & Fachergänzungen" },
+                    { name: "Mathematische Grundlagen der Informatik", ects: 3, semester: 1, cat: "Fachgrundlagen & Fachergänzungen" },
+                    { name: "Programmieren 1", ects: 6, semester: 1, cat: "Fachgrundlagen & Fachergänzungen" },
+                    { name: "System Engineering", ects: 6, semester: 1, cat: "Fachgrundlagen & Fachergänzungen" },
+                    { name: "User Centered Design and Requirements Engineering", ects: 6, semester: 1, cat: "Vertiefungen" },
+                    { name: "Data & AI Fundation", ects: 6, semester: 2, cat: "Fachgrundlagen & Fachergänzungen" },
+                    { name: "Informationssysteme", ects: 6, semester: 2, cat: "Fachgrundlagen & Fachergänzungen" },
+                    { name: "Programmieren 2", ects: 6, semester: 2, cat: "Fachgrundlagen & Fachergänzungen" },
+                    { name: "Software Engineering Fundamentals", ects: 6, semester: 2, cat: "Vertiefungen" },
+                    { name: "Individuelles Softwareprojekte", ects: 6, semester: 2, cat: "Projekte" },
+                ]
+            },
+            {
+                label: "OST<br>BSc Informatik - Teilzeit - Assessment",
+                cssClass: "ost",
+                modules: [
+                    { name: "Rhetorische Kommunikation", ects: 4, semester: 1, cat: "Kommunikation und Englisch" },
+                    { name: "Objektorientierte Programmierung 1", ects: 4, semester: 1, cat: "Rahmenausbildung" },
+                    { name: "Automat. m. Python", ects: 2, semester: 1, cat: "Rahmenausbildung" },
+                    { name: "Computernetze 1", ects: 6, semester: 1, cat: "Rahmenausbildung" },
+                    { name: "Diskrete Mathematik für Informatik", ects: 4, semester: 1, cat: "Mathematik und Physik" },
+                    { name: "Analysis 1 für Informatik", ects: 4, semester: 1, cat: "Mathematik und Physik" },
+                    { name: "Funktionale Programmierung", ects: 4, semester: 2, cat: "Rahmenausbildung" },
+                    { name: "Objektorientierte Programmierung 2", ects: 4, semester: 2, cat: "Rahmenausbildung" },
+                    { name: "Digitale Codierungen", ects: 4, semester: 2, cat: "Rahmenausbildung" },
+                    { name: "Cyber Security Foundations", ects: 4, semester: 2, cat: "Rahmenausbildung" },
+                    { name: "Automaten und Sprachen", ects: 4, semester: 2, cat: "Rahmenausbildung" },
+                    { name: "Analysis 2 für Informatik", ects: 4, semester: 2, cat: "Mathematik und Physik" },
+                ]
+            },
+            {
+                label: "BFH<br>BSc Informatik - Teilzeit - Assessment",
+                cssClass: "bfh",
+                modules: [
+                    { name: "Project and Training 1", ects: 6, semester: 1, cat: "projekt" },
+                    { name: "Programming 1 (Java oder Kotlin)", ects: 4, semester: 1, cat: "fach" },
+                    { name: "Requirements Engineering", ects: 2, semester: 1, cat: "fach" },
+                    { name: "Computer Science Basics", ects: 4, semester: 1, cat: "fach" },
+                    { name: "Discrete Mathematics 1", ects: 4, semester: 1, cat: "mathe" },
+                    { name: "Communications 1", ects: 2, semester: 1, cat: "kommunikation" },
+                    { name: "Special Week 1", ects: 2, semester: 1, cat: "special-weeks" },
+                    { name: "Programming 2 (Java oder Kotlin)", ects: 4, semester: 2, cat: "fach" },
+                    { name: "Databases", ects: 4, semester: 2, cat: "fach" },
+                    { name: "Algorithms and Data Structures", ects: 4, semester: 2, cat: "fach" },
+                    { name: "Interaction Design", ects: 2, semester: 2, cat: "fach" },
+                    { name: "Linear Algebra", ects: 4, semester: 2, cat: "mathe" },
+                    { name: "Communications 2", ects: 2, semester: 2, cat: "kommunikation" },
+                    { name: "Wahlpflichtmodul 2", ects: 2, semester: 2, cat: "special-weeks" },
+                ]
+            },
+            {
+                label: "HSLU<br>BSc Informatik - Teilzeit - Assessment",
+                cssClass: "hslu",
+                modules: [
+                    { name: "Objektorientierte Programmierung", ects: 6, semester: 1, cat: "Kernmodule" },
+                    { name: "Diskrete Mathematik", ects: 6, semester: 1, cat: "Kernmodule" },
+                    { name: "Modellierung Grundlagen", ects: 3, semester: 1, cat: "Kernmodule" },
+                    { name: "Projektmanagement Basics", ects: 3, semester: 1, cat: "Projektmodule" },
+                    { name: "Programmier-Labor", ects: 6, semester: 2, cat: "Kernmodule" },
+                    { name: "Algorithmen & Datenstrukturen", ects: 6, semester: 2, cat: "Kernmodule" },
+                    { name: "Projekt und Teamarbeit", ects: 6, semester: 2, cat: "Projektmodule" },
+                    { name: "Fachkommunikation", ects: 3, semester: 2, cat: "Projektmodule" },
+                ]
+            },
+            {
+                label: "FH Graubünden<br>BSc AI in Software Engineering (Teilzeit)",
+                cssClass: "fhgr",
+                modules: [
+                    { name: "Mathematik I", ects: 5, semester: 1, cat: "grundlagen" },
+                    { name: "Agiles Projektmanagement und Nachhaltigkeit", ects: 5, semester: 1, cat: "grundlagen" },
+                    { name: "Computer Science", ects: 5, semester: 1, cat: "grundlagen" },
+                    { name: "Programmierung und Prompt Engineering I", ects: 5, semester: 1, cat: "grundlagen" },
+                    { name: "Algorithmen und Datenstrukturen", ects: 5, semester: 1, cat: "grundlagen" },
+                    { name: "First Certificate in English B2 (Teil 1/2)", ects: 2.5, semester: 1, cat: "grundlagen" },
+                    { name: "Mathematik II", ects: 5, semester: 2, cat: "grundlagen" },
+                    { name: "Effiziente Algorithmen", ects: 5, semester: 2, cat: "grundlagen" },
+                    { name: "Datenbanken und Datenverarbeitung", ects: 5, semester: 2, cat: "grundlagen" },
+                    { name: "Programmierung und Prompt Engineering II", ects: 5, semester: 2, cat: "grundlagen" },
+                    { name: "AI in Software Engineering I", ects: 5, semester: 2, cat: "ai" },
+                    { name: "First Certificate in English B2 (Teil 2/2)", ects: 2.5, semester: 2, cat: "grundlagen" },
+                ]
+            },
+        ];
+
+        function getColor(cat) {
+            return CATEGORY_COLORS[cat] || "#6b7280";
+        }
+
+        function renderModule(module) {
+            const width = Math.max(module.ects * 26, 52);
+            const kpText = Number.isInteger(module.ects) ? module.ects.toString() : module.ects.toFixed(1);
+            return `
+            <div class="modul" style="background:${getColor(module.cat)}; width:${width}px; flex:0 0 ${width}px;" title="${module.name} (${kpText} ECTS)">
+                <div class="modul-titel">${module.name}</div>
+                <div class="modul-kp">${kpText} ECTS</div>
+            </div>`;
+        }
+
+        function renderRow(program, semesterNumber) {
+            const semesterModules = program.modules.filter(m => m.semester === semesterNumber);
+            return `
+            <div class="uni-row">
+                <div class="uni-label ${program.cssClass}">${program.label}</div>
+                <div class="uni-modules">${semesterModules.map(renderModule).join("")}</div>
+            </div>`;
+        }
+
+        function renderSemesterBlock(semesterNumber, title) {
+            return `
+            <div class="vergleich-semester">
+                <div class="vergleich-semester-titel">${title}</div>
+                ${PROGRAMS.map(program => renderRow(program, semesterNumber)).join("")}
+            </div>`;
+        }
+
+        const root = document.getElementById("vergleich-root");
+        root.innerHTML = renderSemesterBlock(1, "1. Semester") + renderSemesterBlock(2, "2. Semester");
+    </script>
+</body>
+
+</html>
