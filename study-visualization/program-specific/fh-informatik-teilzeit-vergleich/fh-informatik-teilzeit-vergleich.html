@@ -193,12 +193,12 @@
             "kontext": "#059669",
             "pflicht": "#0284c7",
             "kommunikation": "#059669",
-            "special-weeks": "#ea580c",
-            "grundlagen": "#0369a1",
-            "ai": "#6d28d9",
+            "special-weeks": "#059669",
+            "grundlagen": "#0284c7",
+            "ai": "#0284c7",
             "Fachgrundlagen & Fachergänzungen": "#0284c7",
-            "Vertiefungen": "#7c3aed",
-            "Projekte": "#ea580c",
+            "Vertiefungen": "#0284c7",
+            "Projekte": "#7c3aed",
             "Rahmenausbildung": "#0284c7",
             "Mathematik und Physik": "#dc2626",
             "Kommunikation und Englisch": "#059669",
@@ -229,8 +229,8 @@
                 label: "FHNW<br>BSc Informatik - Nur Assessment",
                 cssClass: "fhnw",
                 modules: [
-                    { name: "Lineare Algebra", ects: 3, semester: 1, cat: "Fachgrundlagen & Fachergänzungen" },
-                    { name: "Mathematische Grundlagen der Informatik", ects: 3, semester: 1, cat: "Fachgrundlagen & Fachergänzungen" },
+                    { name: "Lineare Algebra", ects: 3, semester: 1, cat: "mathe" },
+                    { name: "Mathematische Grundlagen der Informatik", ects: 3, semester: 1, cat: "mathe" },
                     { name: "Programmieren 1", ects: 6, semester: 1, cat: "Fachgrundlagen & Fachergänzungen" },
                     { name: "System Engineering", ects: 6, semester: 1, cat: "Fachgrundlagen & Fachergänzungen" },
                     { name: "User Centered Design and Requirements Engineering", ects: 6, semester: 1, cat: "Vertiefungen" },
@@ -284,7 +284,7 @@
                 cssClass: "hslu",
                 modules: [
                     { name: "Objektorientierte Programmierung", ects: 6, semester: 1, cat: "Kernmodule" },
-                    { name: "Diskrete Mathematik", ects: 6, semester: 1, cat: "Kernmodule" },
+                    { name: "Diskrete Mathematik", ects: 6, semester: 1, cat: "mathe" },
                     { name: "Modellierung Grundlagen", ects: 3, semester: 1, cat: "Kernmodule" },
                     { name: "Projektmanagement Basics", ects: 3, semester: 1, cat: "Projektmodule" },
                     { name: "Programmier-Labor", ects: 6, semester: 2, cat: "Kernmodule" },
@@ -297,18 +297,18 @@
                 label: "FH Graubünden<br>BSc AI in Software Engineering (Teilzeit)",
                 cssClass: "fhgr",
                 modules: [
-                    { name: "Mathematik I", ects: 5, semester: 1, cat: "grundlagen" },
+                    { name: "Mathematik I", ects: 5, semester: 1, cat: "mathe" },
                     { name: "Agiles Projektmanagement und Nachhaltigkeit", ects: 5, semester: 1, cat: "grundlagen" },
                     { name: "Computer Science", ects: 5, semester: 1, cat: "grundlagen" },
                     { name: "Programmierung und Prompt Engineering I", ects: 5, semester: 1, cat: "grundlagen" },
                     { name: "Algorithmen und Datenstrukturen", ects: 5, semester: 1, cat: "grundlagen" },
-                    { name: "First Certificate in English B2 (Teil 1/2)", ects: 2.5, semester: 1, cat: "grundlagen" },
-                    { name: "Mathematik II", ects: 5, semester: 2, cat: "grundlagen" },
+                    { name: "First Certificate in English B2 (Teil 1/2)", ects: 2.5, semester: 1, cat: "kommunikation" },
+                    { name: "Mathematik II", ects: 5, semester: 2, cat: "mathe" },
                     { name: "Effiziente Algorithmen", ects: 5, semester: 2, cat: "grundlagen" },
                     { name: "Datenbanken und Datenverarbeitung", ects: 5, semester: 2, cat: "grundlagen" },
                     { name: "Programmierung und Prompt Engineering II", ects: 5, semester: 2, cat: "grundlagen" },
                     { name: "AI in Software Engineering I", ects: 5, semester: 2, cat: "ai" },
-                    { name: "First Certificate in English B2 (Teil 2/2)", ects: 2.5, semester: 2, cat: "grundlagen" },
+                    { name: "First Certificate in English B2 (Teil 2/2)", ects: 2.5, semester: 2, cat: "kommunikation" },
                 ]
             },
         ];
@@ -327,8 +327,51 @@
             </div>`;
         }
 
+        const GREEN_CATEGORIES = new Set([
+            "kontext",
+            "kommunikation",
+            "special-weeks",
+            "Kommunikation und Englisch",
+        ]);
+
+        const PROJECT_CATEGORIES = new Set([
+            "projekt",
+            "Projekte",
+            "Projektmodule",
+        ]);
+
+        const MATH_CATEGORIES = new Set([
+            "mathe",
+            "mathe-nawi",
+            "Mathematik und Physik",
+        ]);
+
+        function getCategoryRank(cat) {
+            if (GREEN_CATEGORIES.has(cat)) return 0;
+            if (PROJECT_CATEGORIES.has(cat)) return 1;
+            if (MATH_CATEGORIES.has(cat)) return 3;
+            return 2; // Blue group (fachgebiet) and other non-math/non-project modules
+        }
+
+        const PROGRAM_DISPLAY_ORDER = {
+            fhnw: 0,
+            hslu: 1,
+            bfh: 2,
+            fhgr: 3,
+            ost: 4,
+            zhaw: 5,
+        };
+
         function renderRow(program, semesterNumber) {
-            const semesterModules = program.modules.filter(m => m.semester === semesterNumber);
+            const semesterModules = program.modules
+                .map((module, index) => ({ module, index }))
+                .filter(item => item.module.semester === semesterNumber)
+                .sort((a, b) => {
+                    const rankDiff = getCategoryRank(a.module.cat) - getCategoryRank(b.module.cat);
+                    if (rankDiff !== 0) return rankDiff;
+                    return a.index - b.index;
+                })
+                .map(item => item.module);
             return `
             <div class="uni-row">
                 <div class="uni-label ${program.cssClass}">${program.label}</div>
@@ -337,10 +380,15 @@
         }
 
         function renderSemesterBlock(semesterNumber, title) {
+            const orderedPrograms = [...PROGRAMS].sort((a, b) => {
+                const rankA = PROGRAM_DISPLAY_ORDER[a.cssClass] ?? Number.MAX_SAFE_INTEGER;
+                const rankB = PROGRAM_DISPLAY_ORDER[b.cssClass] ?? Number.MAX_SAFE_INTEGER;
+                return rankA - rankB;
+            });
             return `
             <div class="vergleich-semester">
                 <div class="vergleich-semester-titel">${title}</div>
-                ${PROGRAMS.map(program => renderRow(program, semesterNumber)).join("")}
+                ${orderedPrograms.map(program => renderRow(program, semesterNumber)).join("")}
             </div>`;
         }
 
